@@ -1,9 +1,9 @@
 (function ($) {
 
-  $(document).ready(function () {
-    // your jQuery code here
-    $('body').append('hello');
-  });
+  // $(document).ready(function () {
+  //   // your jQuery code here
+  //   $('body').append('hello');
+  // });
 
   // TODO: add search form toggle script
   // focus and blur methods

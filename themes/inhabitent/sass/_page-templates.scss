@@ -3,3 +3,51 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+
+/* Journal - index.php */
+.site-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hfeed.site {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-gap: 10px;
+
+  .site-header {
+    grid-area: header;
+  }
+
+  .site-content {
+    grid-area: content;
+
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    // grid-template-rows: minmax(max-content, 100px);
+    grid-template-areas:
+      'main main main sidebar sidebar';
+    grid-gap: 10px;
+
+    .content-area {
+      grid-area: main;
+    }
+
+    .widget-area {
+      grid-area: sidebar;
+      align-self: flex-start;
+    }
+  }
+
+  .site-footer {
+    grid-area: footer;
+    align-self: flex-end;
+  }
+}

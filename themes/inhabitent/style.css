@@ -226,30 +226,30 @@ th {
 # Embedded Fonts
 --------------------------------------------------------------*/
 @font-face {
-  font-family: 'Merriweather Light';
-  src: url("Merriweather-Light.eot");
-  src: url("Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("Merriweather-Light.woff2") format("woff2"), url("Merriweather-Light.woff") format("woff"), url("Merriweather-Light.ttf") format("truetype"), url("Merriweather-Light.svg#Merriweather-Light") format("svg");
+  font-family: 'Merriweather';
+  src: url("../../public/assets/fonts/Merriweather/Merriweather-Light.eot");
+  src: url("../../public/assets/fonts/Merriweather/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../../public/assets/fonts/Merriweather/Merriweather-Light.woff2") format("woff2"), url("../../public/assets/fonts/Merriweather/Merriweather-Light.woff") format("woff"), url("../../public/assets/fonts/Merriweather/Merriweather-Light.ttf") format("truetype"), url("../../public/assets/fonts/Merriweather/Merriweather-Light.svg#Merriweather-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Merriweather Bold';
-  src: url("Merriweather-Bold.eot");
-  src: url("Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("Merriweather-Bold.woff2") format("woff2"), url("Merriweather-Bold.woff") format("woff"), url("Merriweather-Bold.ttf") format("truetype"), url("Merriweather-Bold.svg#Merriweather-Bold") format("svg");
+  src: url("../../public/assets/fonts/Merriweather/Merriweather-Bold.eot");
+  src: url("../../public/assets/fonts/Merriweather/Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.woff2") format("woff2"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.woff") format("woff"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.svg#Merriweather-Bold") format("svg");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Novecento';
-  src: url("Novecentosanswide-Normal.eot");
-  src: url("Novecentosanswide-Normal.eot?#iefix") format("embedded-opentype"), url("Novecentosanswide-Normal.woff2") format("woff2"), url("Novecentosanswide-Normal.woff") format("woff"), url("Novecentosanswide-Normal.ttf") format("truetype"), url("Novecentosanswide-Normal.svg#.") format("svg");
+  src: url("../../public/assets/fonts/Novecento/Novecentosanswide-Normal.eot");
+  src: url("../public/assets/fonts/Novecento/Novecentosanswide-Normal.eot?#iefix") format("embedded-opentype"), url("../../public/assets/fonts/Novecento/Novecentosanswide-Normal.woff2") format("woff2"), url("../../public/assets/fonts/Novecento/Novecentosanswide-Normal.woff") format("woff"), url("../../public/assets/fonts/Novecento/Novecentosanswide-Normal.ttf") format("truetype"), url("../../public/assets/fonts/Novecento/Novecentosanswide-Normal.svg#.") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Novecento Demi Bold';
-  src: url("Novecentosanswide-DemiBold.eot");
-  src: url("Novecentosanswide-DemiBold.eot?#iefix") format("embedded-opentype"), url("Novecentosanswide-DemiBold.woff2") format("woff2"), url("Novecentosanswide-DemiBold.woff") format("woff"), url("Novecentosanswide-DemiBold.ttf") format("truetype"), url("Novecentosanswide-DemiBold.svg#.") format("svg");
+  src: url("../../public/assets/fonts/Novecento/Novecentosanswide-DemiBold.eot");
+  src: url("../../public/assets/fonts/Novecento/Novecentosanswide-DemiBold.eot?#iefix") format("embedded-opentype"), url("../../public/assets/fonts/Novecento/Novecentosanswide-DemiBold.woff2") format("woff2"), url("../../public/assets/fonts/Novecento/Novecentosanswide-DemiBold.woff") format("woff"), url("../../public/assets/fonts/Novecento/Novecentosanswide-DemiBold.ttf") format("truetype"), url("../../public/assets/fonts/Novecento/Novecentosanswide-DemiBold.svg#.") format("svg");
   font-weight: bold;
   font-style: normal; }
 
@@ -262,20 +262,29 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: "Novecento", sans-serif; }
 
 /* Copy */
 p {
   margin-bottom: 1.5rem; }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic; }
 
 blockquote {
@@ -286,7 +295,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-family: "Novecento", sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -295,16 +304,21 @@ pre {
   overflow: auto;
   padding: 1.6rem; }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem; }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help; }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none; }
 
@@ -333,7 +347,7 @@ body {
 
 blockquote,
 q {
-  quotes: '' ''; }
+  quotes: "" ""; }
   blockquote:before, blockquote:after,
   q:before,
   q:after {
@@ -375,6 +389,9 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+a {
+  text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -599,11 +616,14 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+body {
+  margin: 0 auto; }
+
 /* Posts and pages */
 .sticky {
   display: block; }
 
-.hentry {
+.entry {
   margin: 0 0 1.5rem; }
 
 .updated:not(.published) {
@@ -698,3 +718,94 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/* Journal - index.php */
+.site-content {
+  width: 100%;
+  margin: 0 auto; }
+
+.hfeed.site {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'header' 'content' 'footer';
+  grid-gap: 10px; }
+  .hfeed.site .site-header {
+    grid-area: header; }
+  .hfeed.site .site-content {
+    grid-area: content;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 'main main main sidebar sidebar';
+    grid-gap: 10px; }
+    .hfeed.site .site-content .content-area {
+      grid-area: main; }
+    .hfeed.site .site-content .widget-area {
+      grid-area: sidebar;
+      -ms-flex-item-align: start;
+          align-self: flex-start; }
+  .hfeed.site .site-footer {
+    grid-area: footer;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+  background: url("../../public/assets/images/dark-wood.png") repeat top;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .site-footer p,
+  .site-footer a {
+    color: #fff; }
+  .site-footer .copyright {
+    text-align: center; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .footer .site-info {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    .footer .site-info a {
+      padding-right: 5px; }
+    .footer .site-info .contact-info {
+      width: 50%; }
+    .footer .site-info .business-hours {
+      width: 50%; }
+  .footer .fab,
+  .footer .fa {
+    color: #fff; }
+  .footer .footer-logo {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .footer .footer-logo a {
+      text-align: right; }
+      .footer .footer-logo a img {
+        position: relative;
+        top: 1.75rem;
+        right: 0;
+        width: 70%; }
