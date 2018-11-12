@@ -28,15 +28,17 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__brand-green;
+$color__link-visited: $color__brand-green;
+$color__link-hover: $color__text-main;
 
 // Typography
 
 $font__main: 'Merriweather',
 serif;
-$font__accent: "Novecento Demi Bold",
+$font__head: "Novecento Demi Bold",
+sans-serif;
+$font__accent: "Novecento",
 sans-serif;
 // font shown in code tag https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code
 $font__code: Monaco,

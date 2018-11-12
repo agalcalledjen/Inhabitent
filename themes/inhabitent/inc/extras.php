@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function red_starter_body_classes( $classes ) {
+function inhabitent_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -19,7 +19,7 @@ function red_starter_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'red_starter_body_classes' );
+add_filter( 'body_class', 'inhabitent_body_classes' );
 
 /**
  * Change the logo on the WP login screen.
@@ -54,7 +54,18 @@ function inhabitent_the_url( $url ) {
 add_filter( 'login_headerurl', 'inhabitent_the_url' );
 
 // Change all post titles to uppercase
-function all_character_uppercase($title){
-  return ucfirst(strtoupper($title)); 
+// function all_character_uppercase($title){
+//   return ucfirst(strtoupper($title)); 
+// }
+// add_filter('the_title', 'all_character_uppercase');
+
+/**
+ * Filter the except length to 50 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 50;
 }
-add_filter('the_title', 'all_character_uppercase');
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );

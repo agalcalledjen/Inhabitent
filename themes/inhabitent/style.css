@@ -275,7 +275,8 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: "Novecento Demi Bold", sans-serif; }
+  font-family: "Novecento Demi Bold", sans-serif;
+  text-transform: uppercase; }
 
 h2 {
   font-size: 2rem; }
@@ -472,11 +473,11 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: #248A83; }
   a:visited {
-    color: purple; }
+    color: #248A83; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #404040; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -739,8 +740,7 @@ object {
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 'header' 'content' 'footer';
-  grid-gap: 10px; }
+  grid-template-areas: 'header' 'content' 'footer'; }
   .hfeed.site .site-header {
     grid-area: header; }
   .hfeed.site .site-content {
@@ -763,16 +763,45 @@ object {
     -ms-flex-item-align: end;
         align-self: flex-end; }
 
-.entry-header {
-  position: relative; }
-  .entry-header .entry-title {
+.blog .entry-header {
+  position: relative;
+  color: #fff; }
+  .blog .entry-header .entry-title {
     position: absolute;
     left: 0;
-    top: 1.5rem; }
-  .entry-header .entry-meta {
+    top: 0.75rem;
+    background-color: #248A83;
+    padding: 10px 20px;
+    width: 70%;
+    line-height: 1.25; }
+    .blog .entry-header .entry-title a {
+      color: #fff; }
+      .blog .entry-header .entry-title ahover {
+        color: #f0e4d1; }
+  .blog .entry-header .entry-meta {
+    font-family: "Novecento", sans-serif;
+    background-color: #248A83;
+    text-transform: uppercase;
     position: absolute;
-    bottom: 0;
-    right: 0; }
+    bottom: 6px;
+    right: 0;
+    padding: 5px 25px; }
+
+.entry-content .button {
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #404040;
+  font-size: 0.9rem;
+  font-family: "Novecento", sans-serif;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem; }
+  .entry-content .button:hover {
+    border: 1px solid #248A83;
+    background: #248A83;
+    color: #fff; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -820,12 +849,9 @@ object {
     .footer .site-info .contact-info {
       width: 50%; }
       .footer .site-info .contact-info ul {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
-        .footer .site-info .contact-info ul li {
-          -ms-flex-item-align: start;
-              align-self: flex-start; }
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex; }
     .footer .site-info .business-hours {
       width: 50%; }
   .footer .fab,

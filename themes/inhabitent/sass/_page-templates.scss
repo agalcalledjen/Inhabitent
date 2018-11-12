@@ -14,7 +14,6 @@
     'header'
     'content'
     'footer';
-  grid-gap: 10px;
 
   .site-header {
     grid-area: header;
@@ -30,7 +29,6 @@
     // grid-template-rows: minmax(max-content, 100px);
     grid-template-areas:
       'main main main sidebar';
-    // grid-gap: 10px;
 
     .content-area {
       grid-area: main;
@@ -50,18 +48,57 @@
   }
 }
 
-.entry-header {
+.blog .entry-header {
   position: relative;
+  color: #fff;
 
   .entry-title {
     position: absolute;
     left: 0;
-    top: $base__space-unit;
+    top: $base__space-unit / 2;
+    background-color: $color__brand-green;
+    padding: 10px 20px;
+    width: 70%;
+    line-height: 1.25;
+
+    a {
+      color: #fff;
+
+      &hover {
+        color: $color__brand-yellow;
+      }
+    }
   }
 
   .entry-meta {
+    font-family: $font__accent;
+
+    background-color: $color__brand-green;
+    text-transform: uppercase;
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     right: 0;
+    padding: 5px 25px;
+  }
+}
+
+.entry-content {
+
+  .button {
+    border: 1px solid #000;
+    border-radius: 0;
+    background: $color__background-body;
+    box-shadow: none;
+    color: $color__text-main;
+    font-size: $font__size * 0.9;
+    font-family: $font__accent;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+
+    &:hover {
+      border: 1px solid $color__brand-green;
+      background: $color__brand-green;
+      color: $color__background-body;
+    }
   }
 }

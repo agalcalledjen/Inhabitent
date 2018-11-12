@@ -42,11 +42,7 @@
       width: 50%;
 
       ul {
-        display: flex;
-
-        li {
-          align-self: flex-start;
-        }
+        display: inline-flex;
       }
     }
 
