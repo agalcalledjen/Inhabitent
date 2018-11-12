@@ -233,7 +233,7 @@ th {
   font-style: normal; }
 
 @font-face {
-  font-family: 'Merriweather Bold';
+  font-family: 'Merriweather';
   src: url("../../public/assets/fonts/Merriweather/Merriweather-Bold.eot");
   src: url("../../public/assets/fonts/Merriweather/Merriweather-Bold.eot?#iefix") format("embedded-opentype"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.woff2") format("woff2"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.woff") format("woff"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.ttf") format("truetype"), url("../../public/assets/fonts/Merriweather/Merriweather-Bold.svg#Merriweather-Bold") format("svg");
   font-weight: bold;
@@ -275,7 +275,10 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: "Novecento", sans-serif; }
+  font-family: "Novecento Demi Bold", sans-serif; }
+
+h2 {
+  font-size: 2rem; }
 
 /* Copy */
 p {
@@ -295,7 +298,7 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Novecento", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -361,10 +364,11 @@ hr {
 
 ul,
 ol {
-  margin: 0 0 1.5rem 3rem; }
+  margin: 0;
+  padding: 0; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
   list-style: decimal; }
@@ -392,6 +396,9 @@ table {
 
 a {
   text-decoration: none; }
+
+i {
+  padding-right: 0.5rem; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -613,11 +620,20 @@ a {
 .widget_search .search-submit {
   display: none; }
 
+.widget-area {
+  padding: 30px 0 0 55px; }
+  .widget-area ul {
+    margin: 0;
+    padding: 0; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 body {
   margin: 0 auto; }
+
+.container {
+  width: 1120px; }
 
 /* Posts and pages */
 .sticky {
@@ -719,10 +735,6 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 /* Journal - index.php */
-.site-content {
-  width: 100%;
-  margin: 0 auto; }
-
 .hfeed.site {
   overflow: hidden;
   display: grid;
@@ -733,13 +745,15 @@ object {
     grid-area: header; }
   .hfeed.site .site-content {
     grid-area: content;
+    margin: 0 auto;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-areas: 'main main main sidebar sidebar';
-    grid-gap: 10px; }
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'main main main sidebar'; }
     .hfeed.site .site-content .content-area {
-      grid-area: main; }
+      grid-area: main;
+      padding: 50px 55px 0 0;
+      border-right: 1px solid #e1e1e1; }
     .hfeed.site .site-content .widget-area {
       grid-area: sidebar;
       -ms-flex-item-align: start;
@@ -748,6 +762,17 @@ object {
     grid-area: footer;
     -ms-flex-item-align: end;
         align-self: flex-end; }
+
+.entry-header {
+  position: relative; }
+  .entry-header .entry-title {
+    position: absolute;
+    left: 0;
+    top: 1.5rem; }
+  .entry-header .entry-meta {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -766,7 +791,8 @@ object {
   .site-footer a {
     color: #fff; }
   .site-footer .copyright {
-    text-align: center; }
+    text-align: center;
+    font-family: "Novecento"; }
 
 .footer {
   display: -webkit-box;
@@ -775,7 +801,8 @@ object {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  margin: 0 auto; }
   .footer .site-info {
     width: 50%;
     display: -webkit-box;
@@ -785,10 +812,20 @@ object {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row; }
+    .footer .site-info h3 {
+      letter-spacing: 0.1rem;
+      color: #d99054; }
     .footer .site-info a {
       padding-right: 5px; }
     .footer .site-info .contact-info {
       width: 50%; }
+      .footer .site-info .contact-info ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .footer .site-info .contact-info ul li {
+          -ms-flex-item-align: start;
+              align-self: flex-start; }
     .footer .site-info .business-hours {
       width: 50%; }
   .footer .fab,
@@ -809,3 +846,9 @@ object {
         top: 1.75rem;
         right: 0;
         width: 70%; }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  border-bottom: 1px solid #e1e1e1; }

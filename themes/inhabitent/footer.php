@@ -10,10 +10,10 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="footer">
+				<div class="footer container">
           <div class="site-info">
             <div class="contact-info">
-              <h2>CONTACT INFO</h2>
+              <h3>CONTACT INFO</h3>
               <p class="contact-meta">
                 <i class="fa fa-envelope fa-lg"></i>
                 <a href="mailto:info@inhabitent.com"> info@inhabitent.com</a>
@@ -22,8 +22,23 @@
                 <i class="fa fa-phone fa-lg"></i>
                 <a href="tel:7784567891"> 778-456-7891</a>
               </p>
-              <div class="contacts-icons">
-                <a href="https://facebook.com" target="_blank" class="icon-links">
+              <ul class="contacts-icons">
+                <li>
+                  <a href="https://facebook.com" target="_blank" class="icon-links">
+                    <i class="fab fa-facebook-square fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com" target="_blank" class="icon-links">
+                    <i class="fab fa-twitter-square fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://plus.google.com/discover" target="_blank" class="icon-links">
+                    <i class="fab fa-google-plus-square fa-lg"></i>
+                  </a>
+                </li>
+                <!-- <a href="https://facebook.com" target="_blank" class="icon-links">
                   <i class="fab fa-facebook-square fa-lg"></i>
                 </a>
                 <a href="https://www.twitter.com" target="_blank" class="icon-links">
@@ -31,11 +46,11 @@
                 </a>
                 <a href="https://plus.google.com/discover" target="_blank" class="icon-links">
                   <i class="fab fa-google-plus-square fa-lg"></i>
-                </a>
-              </div><!-- end of .contacts-icons -->
+                </a> -->
+              </ul><!-- end of .contacts-icons -->
             </div><!-- end of .contact-info -->
             <div class="business-hours">
-              <h2>CONTACT INFO</h2>
+              <h3>BUSINESS HOURS</h3>
               <p><strong>Monday-Friday:</strong> 9am to 5pm</p>
               <p><strong>Saturday:</strong> 10am to 2pm</p>
               <p><strong>Sunday:</strong> Closed</p>

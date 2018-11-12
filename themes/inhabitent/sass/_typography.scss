@@ -22,7 +22,11 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: $font__pre;
+  font-family: $font__accent;
+}
+
+h2 {
+  font-size: $font__size * 2;
 }
 
 /* Copy */

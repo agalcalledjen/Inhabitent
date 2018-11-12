@@ -52,3 +52,9 @@ function inhabitent_the_url( $url ) {
   return get_bloginfo( 'url' );
 }
 add_filter( 'login_headerurl', 'inhabitent_the_url' );
+
+// Change all post titles to uppercase
+function all_character_uppercase($title){
+  return ucfirst(strtoupper($title)); 
+}
+add_filter('the_title', 'all_character_uppercase');

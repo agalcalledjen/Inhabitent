@@ -6,11 +6,6 @@
 
 
 /* Journal - index.php */
-.site-content {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .hfeed.site {
   overflow: hidden;
   display: grid;
@@ -27,17 +22,20 @@
 
   .site-content {
     grid-area: content;
+    margin: 0 auto;
 
     overflow: hidden;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 1fr;
     // grid-template-rows: minmax(max-content, 100px);
     grid-template-areas:
-      'main main main sidebar sidebar';
-    grid-gap: 10px;
+      'main main main sidebar';
+    // grid-gap: 10px;
 
     .content-area {
       grid-area: main;
+      padding: 50px 55px 0 0;
+      border-right: $border__solid;
     }
 
     .widget-area {
@@ -49,5 +47,21 @@
   .site-footer {
     grid-area: footer;
     align-self: flex-end;
+  }
+}
+
+.entry-header {
+  position: relative;
+
+  .entry-title {
+    position: absolute;
+    left: 0;
+    top: $base__space-unit;
+  }
+
+  .entry-meta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
