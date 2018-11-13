@@ -3,6 +3,9 @@
 --------------------------------------------------------------*/
 body {
   margin: 0 auto;
+  /* This Should Be Equal to the Height of your
+  * fixed header bar. */
+  padding-top: 52.5px;
 }
 
 .container {

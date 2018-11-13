@@ -10,6 +10,7 @@
   p,
   a {
     color: $color__text-footer;
+
   }
 
   .copyright {
@@ -22,7 +23,7 @@
   display: flex;
   flex-direction: row;
   margin: $base__margin;
-  // justify-content: space-between;
+  padding: $base__space-unit*2 0;
 
   .site-info {
     width: 50%;

@@ -265,7 +265,7 @@ textarea {
   font-family: "Merriweather", serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.75; }
 
 /* Headings */
 h1,
@@ -278,13 +278,15 @@ h6 {
   font-family: "Novecento Demi Bold", sans-serif;
   text-transform: uppercase; }
 
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0; }
+
 h2 {
-  font-size: 2rem; }
+  font-size: 2rem;
+  letter-spacing: 1.5px; }
 
 /* Copy */
-p {
-  margin-bottom: 1.5rem; }
-
 dfn,
 cite,
 em,
@@ -328,6 +330,10 @@ ins {
 
 big {
   font-size: 125%; }
+
+form {
+  font-family: "Novecento", sans-serif;
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -385,6 +391,9 @@ dt {
 dd {
   margin: 0 1.5rem 1.5rem; }
 
+article {
+  margin-top: 45px; }
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -401,6 +410,9 @@ a {
 i {
   padding-right: 0.5rem; }
 
+aside > h2 {
+  font-size: 1.5rem; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -409,25 +421,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  background: #248A83;
+  font-size: 0.9rem;
+  font-family: "Novecento", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  padding: .6rem 1rem .4rem; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
+    background: #19625d; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -435,9 +439,7 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    background: #19625d; }
 
 /* Fields */
 input[type="text"],
@@ -448,7 +450,7 @@ input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  background: #f4f4f4; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -631,7 +633,10 @@ a {
 # Content
 --------------------------------------------------------------*/
 body {
-  margin: 0 auto; }
+  margin: 0 auto;
+  /* This Should Be Equal to the Height of your
+  * fixed header bar. */
+  padding-top: 52.5px; }
 
 .container {
   width: 1120px; }
@@ -752,7 +757,7 @@ object {
     grid-template-areas: 'main main main sidebar'; }
     .hfeed.site .site-content .content-area {
       grid-area: main;
-      padding: 50px 55px 0 0;
+      padding: 5px 55px 6rem 0;
       border-right: 1px solid #e1e1e1; }
     .hfeed.site .site-content .widget-area {
       grid-area: sidebar;
@@ -771,12 +776,12 @@ object {
     left: 0;
     top: 0.75rem;
     background-color: #248A83;
-    padding: 10px 20px;
-    width: 70%;
+    padding: 0.75rem 1.5rem;
+    width: 75%;
     line-height: 1.25; }
     .blog .entry-header .entry-title a {
       color: #fff; }
-      .blog .entry-header .entry-title ahover {
+      .blog .entry-header .entry-title a:hover {
         color: #f0e4d1; }
   .blog .entry-header .entry-meta {
     font-family: "Novecento", sans-serif;
@@ -791,8 +796,6 @@ object {
   border: 1px solid #000;
   border-radius: 0;
   background: #fff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   color: #404040;
   font-size: 0.9rem;
   font-family: "Novecento", sans-serif;
@@ -802,6 +805,15 @@ object {
     border: 1px solid #248A83;
     background: #248A83;
     color: #fff; }
+
+.post:last-child {
+  margin-bottom: 6rem; }
+
+/* Find Us - find-us.php */
+.entry-content figure {
+  margin: 1.5rem 0; }
+  .entry-content figure iframe {
+    border: none; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -831,7 +843,8 @@ object {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 3rem 0; }
   .footer .site-info {
     width: 50%;
     display: -webkit-box;
@@ -877,4 +890,55 @@ object {
 # Header
 --------------------------------------------------------------*/
 .site-header {
-  border-bottom: 1px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1;
+  font-family: "Novecento", sans-serif;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  background: rgba(255, 255, 255, 0.8); }
+
+/* This will ensure your site looks correct
+ * when the admin bar is displaying.
+--------------------------------------------- */
+body.admin-bar .site-header {
+  top: 32px; }
+
+.header {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .header li {
+    float: right;
+    padding: 0.75rem; }
+  .header .site-branding a {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .header .site-branding a img {
+      height: 35px;
+      -ms-flex-item-align: center;
+          align-self: center; }
+
+.main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .main-navigation .search-form fieldset {
+    border: none;
+    padding: 0.75rem 0; }
+    .main-navigation .search-form fieldset .search-field {
+      display: none; }
+    .main-navigation .search-form fieldset .search-submit {
+      color: #248A83;
+      border: 0;
+      background: none;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      padding: 0; }

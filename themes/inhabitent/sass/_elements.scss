@@ -65,6 +65,10 @@ dd {
   margin: 0 $base__space-unit $base__space-unit;
 }
 
+article {
+  margin-top: 45px;
+}
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -83,4 +87,8 @@ a {
 
 i {
   padding-right: $base__space-unit/3;
+}
+
+aside>h2 {
+  font-size: $font__size * 1.5;
 }

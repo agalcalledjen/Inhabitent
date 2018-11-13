@@ -26,15 +26,21 @@ h6 {
   text-transform: uppercase;
 }
 
+h1 {
+  font-size: $font__size * 2.5;
+  margin-top: 0;
+}
+
 h2 {
   font-size: $font__size * 2;
+  letter-spacing: $font__space;
 }
 
 /* Copy */
 
-p {
-  margin-bottom: $base__space-unit;
-}
+// p {
+//   margin-bottom: $base__space-unit;
+// }
 
 dfn,
 cite,
@@ -84,4 +90,9 @@ ins {
 
 big {
   font-size: 125%;
+}
+
+form {
+  font-family: $font__accent;
+  text-transform: uppercase;
 }
