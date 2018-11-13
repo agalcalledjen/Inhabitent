@@ -12,7 +12,7 @@ function inhabitent_product_types() {
 	$labels = array(
 		'name'                       => 'Product Types',
 		'singular_name'              => 'Product Type',
-		'menu_name'                  => 'Product Type',
+		'menu_name'                  => 'Product Types',
 		'all_items'                  => 'All Product Types',
 		'parent_item'                => 'Parent Product Type',
 		'parent_item_colon'          => 'Parent Product Type:',
@@ -33,7 +33,7 @@ function inhabitent_product_types() {
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
