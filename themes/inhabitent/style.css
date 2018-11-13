@@ -820,6 +820,11 @@ object {
   .entry-content figure iframe {
     border: none; }
 
+/* Single Product - single-product.php */
+.single-product .content-area {
+  padding-right: 0;
+  border: 0; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
