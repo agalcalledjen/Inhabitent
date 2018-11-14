@@ -83,7 +83,8 @@
   }
 }
 
-.entry-content {
+.entry-content,
+.entry-footer {
 
   .button {
     border: 1px solid #000;
@@ -111,6 +112,19 @@
   margin-bottom: $base__space-unit * 4;
 }
 
+/* single-post - single.php */
+.entry-footer {
+  ul {
+    margin: $base__space-unit 0 $base__space-unit*3;
+    display: flex;
+
+    li {
+      padding-right: 3px;
+    }
+  }
+}
+
+
 /* Find Us - find-us.php */
 .entry-content {
 
@@ -124,11 +138,7 @@
 }
 
 /* Single Product - single-product.php */
-.single-product {
-
-  .content-area {
-    padding-right: 0;
-    border: 0;
-  }
-
+.single-product .content-area {
+  padding-right: 0;
+  border: 0;
 }

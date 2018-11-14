@@ -333,7 +333,8 @@ big {
 
 form {
   font-family: "Novecento", sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #2f1339; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -412,6 +413,10 @@ i {
 
 aside > h2 {
   font-size: 1.5rem; }
+
+span {
+  font-family: "Novecento", sans-serif;
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -660,6 +665,9 @@ body {
 .entry-summary {
   margin: 1.5rem 0 0; }
 
+.cat-links {
+  padding-right: 1.5rem; }
+
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
@@ -797,7 +805,8 @@ object {
     right: 0;
     padding: 5px 25px; }
 
-.entry-content .button {
+.entry-content .button,
+.entry-footer .button {
   border: 1px solid #000;
   border-radius: 0;
   background: #fff;
@@ -806,13 +815,23 @@ object {
   font-family: "Novecento", sans-serif;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem; }
-  .entry-content .button:hover {
+  .entry-content .button:hover,
+  .entry-footer .button:hover {
     border: 1px solid #248A83;
     background: #248A83;
     color: #fff; }
 
 .post:last-child {
   margin-bottom: 6rem; }
+
+/* single-post - single.php */
+.entry-footer ul {
+  margin: 1.5rem 0 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .entry-footer ul li {
+    padding-right: 3px; }
 
 /* Find Us - find-us.php */
 .entry-content figure {

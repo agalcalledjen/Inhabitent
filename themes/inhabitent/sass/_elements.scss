@@ -92,3 +92,8 @@ i {
 aside>h2 {
   font-size: $font__size * 1.5;
 }
+
+span {
+  font-family: $font__accent;
+  text-transform: uppercase;
+}

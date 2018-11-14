@@ -31,6 +31,26 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php inhabitent_entry_footer(); ?>
+    <?php inhabitent_entry_footer(); ?>
+    <ul class="social-links">
+      <li>
+        <a href="https://facebook.com" target="_blank" class="button">
+          <i class="fab fa-facebook-f fa-sm"></i>
+          <span> Like</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitter.com" target="_blank" class="button">
+          <i class="fab fa-twitter fa-sm"></i>
+          <span> Tweet</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.pinterest.ca" target="_blank" class="button">
+          <i class="fab fa-pinterest fa-sm"></i>
+          <span> Pin</span>
+        </a>
+      </li>
+    </ul><!-- end of .social-links -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
