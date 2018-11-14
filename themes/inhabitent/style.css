@@ -401,7 +401,7 @@ article {
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
-  max-width: 100%;
+  width: 100%;
   /* Adhere to container width. */ }
 
 table {
@@ -420,9 +420,6 @@ aside > h2 {
 span {
   font-family: "Novecento", sans-serif;
   text-transform: uppercase; }
-
-.required {
-  color: #d99054; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -695,9 +692,6 @@ body {
 .bypostauthor {
   display: block; }
 
-.required {
-  color: #d99054; }
-
 /* avatar */
 .comment-body {
   display: -webkit-box;
@@ -798,28 +792,32 @@ object {
     grid-area: content;
     margin: 0 auto;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: 'main main main sidebar'; }
-    .hfeed.site .site-content .content-area {
-      grid-area: main;
-      padding: 5px 55px 6rem 0;
-      border-right: 1px solid #e1e1e1; }
-    .hfeed.site .site-content .widget-area {
-      grid-area: sidebar;
-      -ms-flex-item-align: start;
-          align-self: flex-start; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .hfeed.site .site-footer {
     grid-area: footer;
     -ms-flex-item-align: end;
         align-self: flex-end; }
 
+.blog .content-area,
+.single .content-area {
+  width: 73%;
+  padding: 5px 55px 6rem 0;
+  border-right: 1px solid #e1e1e1; }
+
+.blog .widget-area,
+.single .widget-area {
+  width: 27%;
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
 .blog .entry-header,
-.single-post .entry-header {
+.single .entry-header {
   position: relative;
   color: #fff; }
   .blog .entry-header .entry-title,
-  .single-post .entry-header .entry-title {
+  .single .entry-header .entry-title {
     position: absolute;
     left: 0;
     top: 0.75rem;
@@ -828,13 +826,13 @@ object {
     width: 75%;
     line-height: 1.25; }
     .blog .entry-header .entry-title a,
-    .single-post .entry-header .entry-title a {
+    .single .entry-header .entry-title a {
       color: #fff; }
       .blog .entry-header .entry-title a:hover,
-      .single-post .entry-header .entry-title a:hover {
+      .single .entry-header .entry-title a:hover {
         color: #f0e4d1; }
   .blog .entry-header .entry-meta,
-  .single-post .entry-header .entry-meta {
+  .single .entry-header .entry-meta {
     font-family: "Novecento", sans-serif;
     background-color: #248A83;
     text-transform: uppercase;
@@ -844,7 +842,8 @@ object {
     padding: 5px 25px; }
 
 .entry-content .button,
-.entry-footer .button {
+.entry-footer .button,
+.home .button {
   border: 1px solid #000;
   border-radius: 0;
   background: #fff;
@@ -854,7 +853,8 @@ object {
   text-transform: uppercase;
   padding: 0.75rem 1.5rem; }
   .entry-content .button:hover,
-  .entry-footer .button:hover {
+  .entry-footer .button:hover,
+  .home .button:hover {
     border: 1px solid #248A83;
     background: #248A83;
     color: #fff; }
@@ -878,10 +878,12 @@ object {
     border: none; }
 
 /* Single Product - single-product.php */
-.single-product .content-area {
-  padding-right: 0;
-  border: 0; }
+/* About - about.php */
+.page-template-about .entry-header .content-area {
+  border: 0;
+  width: 100%; }
 
+/* Homepage - front-page.php */
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -923,7 +925,8 @@ object {
             flex-direction: row; }
     .footer .site-info h3 {
       letter-spacing: 0.1rem;
-      color: #d99054; }
+      color: #d99054;
+      font-size: 1.25rem; }
     .footer .site-info a {
       padding-right: 5px; }
     .footer .site-info .contact-info {
@@ -978,7 +981,6 @@ body.admin-bar .site-header {
   display: -ms-flexbox;
   display: flex; }
   .header li {
-    float: right;
     padding: 0.75rem; }
   .header .site-branding a {
     height: 100%;
@@ -988,7 +990,8 @@ body.admin-bar .site-header {
     .header .site-branding a img {
       height: 35px;
       -ms-flex-item-align: center;
-          align-self: center; }
+          align-self: center;
+      width: 30%; }
 
 .main-navigation {
   display: -webkit-box;

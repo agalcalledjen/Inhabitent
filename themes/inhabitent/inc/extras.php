@@ -69,3 +69,47 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 50;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+// TODO move login header PHP top this folder
+
+/**
+ * Custom Hero Image for the About Page 
+ */
+function inhabitent_hero_banner(){
+  if(!is_page_template('about.php')){
+    return;
+  }
+
+  // gets the url of the banner image
+  $image = CFS()->get('about_header_image');
+  // var_dump($image);
+
+  if(!$image){
+    $hero_css = ".page-template-about .entry-header {
+      background: grey;
+      color: white;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }";
+  } else {
+    $hero_css = ".page-template-about .entry-header {
+      background: grey;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100%),
+      url({$image});
+      color: white;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      background-size: cover;
+    }";
+  }
+
+  // a method to add inline style and 'inhabitent-style' is a name that we have given to the styling which must match what's in functions.php when loading scripts
+  wp_add_inline_style('inhabitent-style', $hero_css);
+}
+add_action('wp_enqueue_scripts', 'inhabitent_hero_banner');

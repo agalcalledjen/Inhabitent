@@ -47,7 +47,7 @@ add_action( 'after_setup_theme', 'inhabitent_setup' );
 function inhabitent_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'red_starter_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'inhabitent_width', 0 );
+add_action( 'after_setup_theme', 'inhabitent_content_width', 0 );
 
 /**
  * Register widget area.

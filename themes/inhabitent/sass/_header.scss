@@ -26,7 +26,6 @@ body.admin-bar .site-header {
   display: flex;
 
   li {
-    float: right;
     padding: $base__space-unit / 2;
   }
 
@@ -38,6 +37,7 @@ body.admin-bar .site-header {
       img {
         height: 35px;
         align-self: center;
+        width: 30%;
       }
     }
   }

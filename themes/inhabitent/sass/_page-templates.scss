@@ -24,22 +24,12 @@
     margin: 0 auto;
 
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    // grid-template-rows: minmax(max-content, 100px);
-    grid-template-areas:
-      'main main main sidebar';
-
-    .content-area {
-      grid-area: main;
-      padding: 5px 55px $base__space-unit*4 0;
-      border-right: $border__solid;
-    }
-
-    .widget-area {
-      grid-area: sidebar;
-      align-self: flex-start;
-    }
+    // display: grid;
+    // grid-template-columns: 3fr 1fr;
+    // // grid-template-rows: minmax(max-content, 100px);
+    // grid-template-areas:
+    //   'main main main sidebar';
+    display: flex;
   }
 
   .site-footer {
@@ -48,8 +38,23 @@
   }
 }
 
+.blog .content-area,
+.single .content-area {
+  // grid-area: main;
+  width: 73%;
+  padding: 5px 55px $base__space-unit*4 0;
+  border-right: $border__solid;
+}
+
+.blog .widget-area,
+.single .widget-area {
+  // grid-area: sidebar;
+  width: 27%;
+  align-self: flex-start;
+}
+
 .blog .entry-header,
-.single-post .entry-header {
+.single .entry-header {
   position: relative;
   color: #fff;
 
@@ -84,7 +89,8 @@
 }
 
 .entry-content,
-.entry-footer {
+.entry-footer,
+.home {
 
   .button {
     border: 1px solid #000;
@@ -138,7 +144,22 @@
 }
 
 /* Single Product - single-product.php */
-.single-product .content-area {
-  padding-right: 0;
-  border: 0;
+// .single-product .content-area {
+//   padding-right: 0;
+//   border: 0;
+// }
+
+
+/* About - about.php */
+.page-template-about .entry-header {
+  .content-area {
+    border: 0;
+    width: 100%;
+  }
 }
+
+/* Homepage - front-page.php */
+// .home .content-area {
+//   width: 100vw;
+//   border: 0;
+// }

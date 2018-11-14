@@ -72,7 +72,7 @@ article {
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
-  max-width: 100%;
+  width: 100%;
   /* Adhere to container width. */
 }
 
@@ -96,8 +96,4 @@ aside>h2 {
 span {
   font-family: $font__accent;
   text-transform: uppercase;
-}
-
-.required {
-  color: $color__brand-orange;
 }
