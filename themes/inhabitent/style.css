@@ -284,11 +284,14 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  letter-spacing: 1.5px; }
+  letter-spacing: 1.5px;
+  color: #2f1339; }
+
+h3 {
+  font-size: 2rem; }
 
 /* Copy */
 dfn,
-cite,
 em,
 i {
   font-style: italic; }
@@ -418,6 +421,9 @@ span {
   font-family: "Novecento", sans-serif;
   text-transform: uppercase; }
 
+.required {
+  color: #d99054; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -469,11 +475,16 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 3px;
+  margin-top: 10px; }
 
 textarea {
   padding-left: 3px;
+  margin-top: 10px;
   width: 100%; }
+
+.required {
+  color: #d99054; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -684,6 +695,33 @@ body {
 .bypostauthor {
   display: block; }
 
+.required {
+  color: #d99054; }
+
+/* avatar */
+.comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.avatar {
+  border-radius: 50%; }
+
+.comment-content {
+  position: relative;
+  top: -5px;
+  left: 1rem; }
+
+.single-post h2 {
+  color: #2f1339; }
+
+.single-post .fn {
+  font-weight: 700;
+  font-style: normal; }
+
+.single-post .comment-metadata {
+  color: #a1a1a1; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -777,11 +815,11 @@ object {
         align-self: flex-end; }
 
 .blog .entry-header,
-.single .entry-header {
+.single-post .entry-header {
   position: relative;
   color: #fff; }
   .blog .entry-header .entry-title,
-  .single .entry-header .entry-title {
+  .single-post .entry-header .entry-title {
     position: absolute;
     left: 0;
     top: 0.75rem;
@@ -790,13 +828,13 @@ object {
     width: 75%;
     line-height: 1.25; }
     .blog .entry-header .entry-title a,
-    .single .entry-header .entry-title a {
+    .single-post .entry-header .entry-title a {
       color: #fff; }
       .blog .entry-header .entry-title a:hover,
-      .single .entry-header .entry-title a:hover {
+      .single-post .entry-header .entry-title a:hover {
         color: #f0e4d1; }
   .blog .entry-header .entry-meta,
-  .single .entry-header .entry-meta {
+  .single-post .entry-header .entry-meta {
     font-family: "Novecento", sans-serif;
     background-color: #248A83;
     text-transform: uppercase;

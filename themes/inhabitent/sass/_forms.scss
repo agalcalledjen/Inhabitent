@@ -49,9 +49,15 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
   padding: 3px;
+  margin-top: 10px;
 }
 
 textarea {
   padding-left: 3px;
+  margin-top: 10px;
   width: 100%;
+}
+
+.required {
+  color: $color__brand-orange;
 }

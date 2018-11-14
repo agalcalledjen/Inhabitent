@@ -62,3 +62,38 @@ body {
 .bypostauthor {
   display: block;
 }
+
+.required {
+  color: $color__brand-orange;
+}
+
+/* avatar */
+.comment-body {
+  display: flex;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.comment-content {
+  position: relative;
+  top: -5px;
+  left: 1rem;
+}
+
+.single-post {
+
+  h2 {
+    color: $color__brand-purple;
+  }
+
+  .fn {
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .comment-metadata {
+    color: $color__brand-lightgrey;
+  }
+}

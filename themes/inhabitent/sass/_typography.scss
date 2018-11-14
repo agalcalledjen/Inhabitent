@@ -34,6 +34,11 @@ h1 {
 h2 {
   font-size: $font__size * 2;
   letter-spacing: $font__space;
+  color: $color__brand-purple;
+}
+
+h3 {
+  font-size: $font__size * 2;
 }
 
 /* Copy */
@@ -43,7 +48,6 @@ h2 {
 // }
 
 dfn,
-cite,
 em,
 i {
   font-style: italic;
