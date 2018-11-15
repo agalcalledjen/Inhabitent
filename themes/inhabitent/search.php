@@ -14,12 +14,13 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+			</header><hr><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'search' ); ?>
+        <?php get_template_part( 'template-parts/content', 'search' ); ?>
+        <a href="<?php echo get_permalink(); ?>" class="button">Read More &rarr;</a>
 
 			<?php endwhile; ?>
 
@@ -28,9 +29,9 @@ get_header(); ?>
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
+      
 		<?php endif; ?>
-
+    
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

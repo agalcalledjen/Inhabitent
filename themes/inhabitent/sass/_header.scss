@@ -17,7 +17,8 @@
 .blog .site-header,
 .single .site-header,
 .page-template-find-us .site-header,
-.archive .site-header {
+.archive .site-header,
+.search-results .site-header {
   border-bottom: $border__solid;
   background: rgba(255, 255, 255, 0.8);
 }
@@ -39,7 +40,7 @@ body.admin-bar .site-header {
   display: flex;
 
   li {
-    padding: $base__space-unit / 2;
+    padding: $base__space-unit / 2 0.65rem;
   }
 
   .site-branding {
@@ -74,7 +75,7 @@ body.admin-bar .site-header {
         border: 0;
         background: none;
         box-shadow: none;
-        padding: 0;
+        padding: 0 0 0 0.65rem;
       }
     }
   }
@@ -97,7 +98,8 @@ body.admin-bar .site-header {
 .blog,
 .single,
 .page-template-find-us,
-.archive {
+.archive,
+.search-results {
   /* This Should Be Equal to the Height of your
   * fixed header bar. */
   padding-top: 52.5px;

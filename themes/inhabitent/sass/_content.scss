@@ -31,7 +31,7 @@ body {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: $base__space-unit 0 0;
+  margin: $base__space-unit 0;
 }
 
 .cat-links {
@@ -162,5 +162,16 @@ body {
   .comment-form-url {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* Search Results - search.php */
+.search-results {
+  h1 {
+    margin: 2rem 0 $base__space-unit/2;
+
+    span {
+      font-family: $font__head;
+    }
   }
 }

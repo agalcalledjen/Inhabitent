@@ -5,7 +5,7 @@
 		</label>
 		<button class="search-submit">
 			<span class="icon-search" aria-hidden="true">
-				<i class="fa fa-search fa-lg"></i>
+				<i class="fa fa-search fa-md"></i>
 			</span>
 			<span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
 		</button>

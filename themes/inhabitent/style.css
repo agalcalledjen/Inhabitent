@@ -378,7 +378,7 @@ q {
     content: ''; }
 
 hr {
-  background-color: #ccc;
+  background-color: #e1e1e1;
   border: 0;
   height: 1px;
   margin-bottom: 1.5rem; }
@@ -493,6 +493,7 @@ textarea {
 .required {
   color: #d99054; }
 
+/* Search Form */
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -678,7 +679,7 @@ body {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5rem 0 0; }
+  margin: 1.5rem 0; }
 
 .cat-links {
   padding-right: 1.5rem; }
@@ -780,6 +781,12 @@ body {
         -ms-flex-direction: column;
             flex-direction: column; }
 
+/* Search Results - search.php */
+.search-results h1 {
+  margin: 2rem 0 0.75rem; }
+  .search-results h1 span {
+    font-family: "Novecento Demi Bold", sans-serif; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -866,13 +873,15 @@ object {
 
 .blog .content-area,
 .single-post .content-area,
-.page-template-find-us .content-area {
+.page-template-find-us .content-area,
+.search-results .content-area {
   width: 73%;
   padding: 5px 55px 6rem 0;
   border-right: 1px solid #e1e1e1; }
 
 .blog .widget-area,
-.single-post .widget-area {
+.single-post .widget-area,
+.search-results .widget-area {
   width: 27%;
   -ms-flex-item-align: start;
       align-self: flex-start; }
@@ -908,7 +917,8 @@ object {
 
 .entry-content .button,
 .entry-footer .button,
-.home .button {
+.home .button,
+.search-results .button {
   border: 1px solid #000;
   border-radius: 0;
   background: #fff;
@@ -919,7 +929,8 @@ object {
   padding: 0.75rem 1.5rem; }
   .entry-content .button:hover,
   .entry-footer .button:hover,
-  .home .button:hover {
+  .home .button:hover,
+  .search-results .button:hover {
     border: 1px solid #248A83;
     background: #248A83;
     color: #fff; }
@@ -1080,11 +1091,12 @@ object {
       .single-product .content-area .type-product .entry-content h2 {
         font-size: 2.5rem;
         color: #d99054;
-        margin: 0; }
+        margin: 0;
+        line-height: 1; }
       .single-product .content-area .type-product .entry-content .price {
         font-family: "Novecento", sans-serif;
         font-size: 1.8rem;
-        margin-top: 0; }
+        margin: 0.75rem 0; }
       .single-product .content-area .type-product .entry-content span {
         font-family: "Merriweather", serif;
         text-transform: capitalize; }
@@ -1179,7 +1191,8 @@ object {
 .blog .site-header,
 .single .site-header,
 .page-template-find-us .site-header,
-.archive .site-header {
+.archive .site-header,
+.search-results .site-header {
   border-bottom: 1px solid #e1e1e1;
   background: rgba(255, 255, 255, 0.8); }
 
@@ -1199,7 +1212,7 @@ body.admin-bar .site-header {
   display: -ms-flexbox;
   display: flex; }
   .header li {
-    padding: 0.75rem; }
+    padding: 0.75rem 0.65rem; }
   .header .site-branding a {
     height: 100%;
     display: -webkit-box;
@@ -1228,7 +1241,7 @@ body.admin-bar .site-header {
       background: none;
       -webkit-box-shadow: none;
               box-shadow: none;
-      padding: 0; }
+      padding: 0 0 0 0.65rem; }
 
 .home .search-submit,
 .blog .search-submit,
@@ -1246,7 +1259,8 @@ body.admin-bar .site-header {
 .blog,
 .single,
 .page-template-find-us,
-.archive {
+.archive,
+.search-results {
   /* This Should Be Equal to the Height of your
   * fixed header bar. */
   padding-top: 52.5px; }

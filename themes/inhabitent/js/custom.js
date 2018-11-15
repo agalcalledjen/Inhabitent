@@ -1,9 +1,11 @@
 (function ($) {
 
-  // $(document).ready(function () {
-  //   // your jQuery code here
-  //   $('body').append('hello');
-  // });
+  $(document).ready(function () {
+    // toggle search form
+    $('#fa-search').on('click', function () {
+      $('.search-field').toggle('display: inline-block');
+    });
+  });
 
   // TODO: add search form toggle script
   // focus and blur methods

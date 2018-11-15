@@ -40,7 +40,8 @@
 
 .blog .content-area,
 .single-post .content-area,
-.page-template-find-us .content-area {
+.page-template-find-us .content-area,
+.search-results .content-area {
   // grid-area: main;
   width: 73%;
   padding: 5px 55px $base__space-unit*4 0;
@@ -48,7 +49,8 @@
 }
 
 .blog .widget-area,
-.single-post .widget-area {
+.single-post .widget-area,
+.search-results .widget-area {
   // grid-area: sidebar;
   width: 27%;
   align-self: flex-start;
@@ -91,7 +93,8 @@
 
 .entry-content,
 .entry-footer,
-.home {
+.home,
+.search-results {
   .button {
     border: 1px solid #000;
     border-radius: 0;
@@ -302,12 +305,13 @@
         font-size: $font__size * 2.5;
         color: $color__brand-orange;
         margin: 0;
+        line-height: 1;
       }
 
       .price {
         font-family: $font__accent;
         font-size: $font__size * 1.8;
-        margin-top: 0;
+        margin: $base__space-unit / 2 0;
       }
 
       span {
