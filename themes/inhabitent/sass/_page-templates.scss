@@ -151,11 +151,34 @@
 
 
 /* About - about.php */
-.page-template-about .entry-header {
-  .content-area {
-    border: 0;
-    width: 100%;
+// .page-template-about .entry-header {
+//   .content-area {
+//     border: 0;
+//     width: 100%;
+
+//     .post-11 .page {
+//       margin-top: 0;
+//     }
+
+//   }
+// }
+.page-template-about .site-content {
+  width: 100%;
+
+  .entry-content {
+    width: 61%;
+    margin: 0 auto;
+    padding-top: $base__space-unit;
+    padding-bottom: $base__space-unit * 2;
+
+    h2 {
+      text-align: center;
+    }
   }
+}
+
+.page-template-about article {
+  margin-top: 0;
 }
 
 /* Homepage - front-page.php */
@@ -173,7 +196,7 @@
     align-items: center;
     text-align: center;
     padding: $base__space-unit / 2;
-    border-top-width: 5px;
+    border-top: 5px solid #e1e1e1;
 
     &:hover {
       border-color: $color__brand-orange;
@@ -195,11 +218,12 @@
   .frontpage-journal-wrapper {
     display: flex;
     justify-content: space-between;
-    // text-align: center;
 
     .frontpage-term,
     .journal-entry {
-      border: $border__solid;
+      border-right: $border__solid;
+      border-bottom: $border__solid;
+      border-left: $border__solid;
 
       display: flex;
       flex-direction: column;
@@ -217,6 +241,8 @@
 
   .journal-entry {
     width: 32%;
+    margin-top: $base__space-unit;
+    border-top: 1px solid #e1e1e1;
 
     img {
       border-bottom: 5px solid #e1e1e1;
