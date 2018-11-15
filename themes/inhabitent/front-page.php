@@ -48,11 +48,9 @@ get_header(); ?>
     <?php endif; ?> 
     <!-- end of default loop -->
 
-    
-
     <section class="frontpage-shop">
       <h2>Shop Stuff</h2>
-      <div class="frontpage-wrapper">
+      <div class="frontpage-shop-wrapper">
       <?php
         // Get the terms for our products and do some clever stuff with images.
         $terms = get_terms(array(
@@ -66,7 +64,7 @@ get_header(); ?>
             <!-- <?php d($term); ?> -->
             <img src="<?php echo get_template_directory_uri() . '/public/assets/images/' . $term->slug . '.svg'; ?>" alt="<?php echo $term->name; ?>"/>
             <p><?php echo $term->description; ?></p>
-            <p><a href="<?php echo get_term_link($term); ?>" class="button"><?php echo $term->name; ?> Stuff</a></p>
+            <a href="<?php echo get_term_link($term); ?>"><button><?php echo $term->name; ?> Stuff</button></a>
             
           </div>
         <?php endforeach;
@@ -94,21 +92,23 @@ get_header(); ?>
                 the_post_thumbnail('medium'); 
               }
               ?>
-              <span class="entry-meta">
-              <?php
-              // the post meta
-              inhabitent_posted_on();
-              echo ' / ';
-              comments_number('0 Comments', '1 Comment', '% Comments'); 
-              ?>
-              </span>
-              <!-- post title -->
-              <a href="<?php echo get_permalink(); ?>">
-                <h4><?php the_title(); ?></h4>
-              </a>
-              
-              <!-- the permalink -->
-              <a href="<?php echo get_permalink(); ?>" class="button">Read Entry</a>
+              <div class="journal-entry-info">
+                <span class="entry-meta">
+                <?php
+                // the post meta
+                inhabitent_posted_on();
+                echo ' / ';
+                comments_number('0 Comments', '1 Comment', '% Comments'); 
+                ?>
+                </span>
+                <!-- post title -->
+                <a href="<?php echo get_permalink(); ?>">
+                  <h4><?php the_title(); ?></h4>
+                </a>
+                
+                <!-- the permalink -->
+                <a href="<?php echo get_permalink(); ?>" class="button">Read Entry</a>
+              </div>
             </article>
           <?php endforeach; wp_reset_postdata(); ?>
         </div>

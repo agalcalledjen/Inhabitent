@@ -290,6 +290,11 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  margin: 0 0 1.5rem; }
+
 /* Copy */
 dfn,
 em,
@@ -884,6 +889,92 @@ object {
   width: 100%; }
 
 /* Homepage - front-page.php */
+.home .content-area h2 {
+  text-align: center;
+  font-family: "Novecento", sans-serif;
+  font-weight: 100;
+  font-size: 2.5rem; }
+
+.home .content-area .frontpage-term {
+  width: 23.5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0.75rem;
+  border-top-width: 5px; }
+  .home .content-area .frontpage-term:hover {
+    border-color: #d99054; }
+  .home .content-area .frontpage-term img {
+    width: 30%; }
+
+.frontpage-shop,
+.frontpage-journal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .frontpage-shop .frontpage-shop-wrapper,
+  .frontpage-shop .frontpage-journal-wrapper,
+  .frontpage-journal .frontpage-shop-wrapper,
+  .frontpage-journal .frontpage-journal-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .frontpage-shop .frontpage-shop-wrapper .frontpage-term,
+    .frontpage-shop .frontpage-shop-wrapper .journal-entry,
+    .frontpage-shop .frontpage-journal-wrapper .frontpage-term,
+    .frontpage-shop .frontpage-journal-wrapper .journal-entry,
+    .frontpage-journal .frontpage-shop-wrapper .frontpage-term,
+    .frontpage-journal .frontpage-shop-wrapper .journal-entry,
+    .frontpage-journal .frontpage-journal-wrapper .frontpage-term,
+    .frontpage-journal .frontpage-journal-wrapper .journal-entry {
+      border: 1px solid #e1e1e1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+
+.frontpage-journal {
+  margin-bottom: 4.5rem; }
+  .frontpage-journal h2 {
+    margin-top: 4.5rem; }
+  .frontpage-journal .journal-entry {
+    width: 32%; }
+    .frontpage-journal .journal-entry img {
+      border-bottom: 5px solid #e1e1e1; }
+    .frontpage-journal .journal-entry .journal-entry-info {
+      padding: 0.75rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: left; }
+      .frontpage-journal .journal-entry .journal-entry-info .entry-meta,
+      .frontpage-journal .journal-entry .journal-entry-info .entry-date {
+        font-family: 'Merriweather';
+        text-transform: capitalize;
+        font-size: 0.8rem; }
+      .frontpage-journal .journal-entry .journal-entry-info .button {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        padding: .5rem 1.5rem; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
