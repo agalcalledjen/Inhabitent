@@ -133,3 +133,34 @@ body {
   padding-top: $base__space-unit;
   border-top: $border__solid;
 }
+
+/* Comments - logged out */
+.comment-form p:first-child {
+  font-family: $font__main;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: $base__space-unit;
+}
+
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .comment-form-comment,
+  .comment-form-url {
+    width: 100%;
+  }
+
+  .comment-form-author,
+  .comment-form-email {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+  }
+
+  .comment-form-url {
+    display: flex;
+    flex-direction: column;
+  }
+}

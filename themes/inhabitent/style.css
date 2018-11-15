@@ -292,7 +292,8 @@ h2 {
   color: #2f1339; }
 
 h3 {
-  font-size: 2rem; }
+  font-size: 1.8rem;
+  letter-spacing: 2px; }
 
 h4 {
   font-size: 1.4rem;
@@ -740,6 +741,44 @@ body {
   margin-top: 0;
   padding-top: 1.5rem;
   border-top: 1px solid #e1e1e1; }
+
+/* Comments - logged out */
+.comment-form p:first-child {
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
+
+.comment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .comment-form .comment-form-comment,
+  .comment-form .comment-form-url {
+    width: 100%; }
+  .comment-form .comment-form-author,
+  .comment-form .comment-form-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 49%; }
+  .comment-form .comment-form-url {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 /*--------------------------------------------------------------
 # Media
