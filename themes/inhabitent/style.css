@@ -865,24 +865,24 @@ object {
         align-self: flex-end; }
 
 .blog .content-area,
-.single .content-area,
+.single-post .content-area,
 .page-template-find-us .content-area {
   width: 73%;
   padding: 5px 55px 6rem 0;
   border-right: 1px solid #e1e1e1; }
 
 .blog .widget-area,
-.single .widget-area {
+.single-post .widget-area {
   width: 27%;
   -ms-flex-item-align: start;
       align-self: flex-start; }
 
 .blog .entry-header,
-.single .entry-header {
+.single-post .entry-header {
   position: relative;
   color: #fff; }
   .blog .entry-header .entry-title,
-  .single .entry-header .entry-title {
+  .single-post .entry-header .entry-title {
     position: absolute;
     left: 0;
     top: 0.75rem;
@@ -891,13 +891,13 @@ object {
     width: 75%;
     line-height: 1.25; }
     .blog .entry-header .entry-title a,
-    .single .entry-header .entry-title a {
+    .single-post .entry-header .entry-title a {
       color: #fff; }
       .blog .entry-header .entry-title a:hover,
-      .single .entry-header .entry-title a:hover {
+      .single-post .entry-header .entry-title a:hover {
         color: #f0e4d1; }
   .blog .entry-header .entry-meta,
-  .single .entry-header .entry-meta {
+  .single-post .entry-header .entry-meta {
     font-family: "Novecento", sans-serif;
     background-color: #248A83;
     text-transform: uppercase;
@@ -931,9 +931,9 @@ object {
   margin-bottom: 6rem; }
 
 /* single-post - single.php */
-.single .comments-link a {
+.single-post .comments-link a {
   color: #fff; }
-  .single .comments-link a:hover {
+  .single-post .comments-link a:hover {
     color: #f0e4d1; }
 
 .entry-footer ul {
@@ -1058,6 +1058,40 @@ object {
             align-self: flex-start;
         padding: .5rem 1.5rem; }
 
+/* Single Product - single-product.php */
+.single-product .content-area {
+  width: 100%;
+  padding: 0 0 4.5rem;
+  border: 0; }
+  .single-product .content-area .type-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .single-product .content-area .type-product .entry-header {
+      width: 48%; }
+    .single-product .content-area .type-product .entry-content {
+      width: 48%;
+      margin-top: 0; }
+      .single-product .content-area .type-product .entry-content h2 {
+        font-size: 2.5rem;
+        color: #d99054;
+        margin: 0; }
+      .single-product .content-area .type-product .entry-content .price {
+        font-family: "Novecento", sans-serif;
+        font-size: 1.8rem;
+        margin-top: 0; }
+      .single-product .content-area .type-product .entry-content span {
+        font-family: "Merriweather", serif;
+        text-transform: capitalize; }
+    .single-product .content-area .type-product .entry-footer {
+      width: 48%;
+      margin-left: 52%; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1144,7 +1178,8 @@ object {
 .home .site-header,
 .blog .site-header,
 .single .site-header,
-.page-template-find-us .site-header {
+.page-template-find-us .site-header,
+.archive .site-header {
   border-bottom: 1px solid #e1e1e1;
   background: rgba(255, 255, 255, 0.8); }
 
@@ -1198,7 +1233,8 @@ body.admin-bar .site-header {
 .home .search-submit,
 .blog .search-submit,
 .single .search-submit,
-.page-template-find-us .search-submit {
+.page-template-find-us .search-submit,
+.archive .search-submit {
   color: #248A83; }
 
 .page-template-about .search-submit {
@@ -1209,7 +1245,8 @@ body.admin-bar .site-header {
 .home,
 .blog,
 .single,
-.page-template-find-us {
+.page-template-find-us,
+.archive {
   /* This Should Be Equal to the Height of your
   * fixed header bar. */
   padding-top: 52.5px; }

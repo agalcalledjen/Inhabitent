@@ -16,7 +16,8 @@
 .home .site-header,
 .blog .site-header,
 .single .site-header,
-.page-template-find-us .site-header {
+.page-template-find-us .site-header,
+.archive .site-header {
   border-bottom: $border__solid;
   background: rgba(255, 255, 255, 0.8);
 }
@@ -82,7 +83,8 @@ body.admin-bar .site-header {
 .home .search-submit,
 .blog .search-submit,
 .single .search-submit,
-.page-template-find-us .search-submit {
+.page-template-find-us .search-submit,
+.archive .search-submit {
   color: $color__brand-green;
 }
 
@@ -94,7 +96,8 @@ body.admin-bar .site-header {
 .home,
 .blog,
 .single,
-.page-template-find-us {
+.page-template-find-us,
+.archive {
   /* This Should Be Equal to the Height of your
   * fixed header bar. */
   padding-top: 52.5px;

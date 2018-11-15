@@ -39,7 +39,7 @@
 }
 
 .blog .content-area,
-.single .content-area,
+.single-post .content-area,
 .page-template-find-us .content-area {
   // grid-area: main;
   width: 73%;
@@ -48,14 +48,14 @@
 }
 
 .blog .widget-area,
-.single .widget-area {
+.single-post .widget-area {
   // grid-area: sidebar;
   width: 27%;
   align-self: flex-start;
 }
 
 .blog .entry-header,
-.single .entry-header {
+.single-post .entry-header {
   position: relative;
   color: #fff;
 
@@ -125,7 +125,7 @@
 }
 
 /* single-post - single.php */
-.single .comments-link {
+.single-post .comments-link {
 
   a {
     color: $color__background-body;
@@ -277,4 +277,50 @@
       }
     }
   }
+}
+
+/* Single Product - single-product.php */
+.single-product .content-area {
+  width: 100%;
+  padding: 0 0 $base__space-unit * 3;
+  border: 0;
+
+  .type-product {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .entry-header {
+      width: 48%;
+    }
+
+    .entry-content {
+      width: 48%;
+      margin-top: 0;
+
+      h2 {
+        font-size: $font__size * 2.5;
+        color: $color__brand-orange;
+        margin: 0;
+      }
+
+      .price {
+        font-family: $font__accent;
+        font-size: $font__size * 1.8;
+        margin-top: 0;
+      }
+
+      span {
+        font-family: $font__main;
+        text-transform: capitalize;
+      }
+    }
+
+    .entry-footer {
+      width: 48%;
+      margin-left: 52%;
+    }
+  }
+
+
 }
