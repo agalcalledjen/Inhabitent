@@ -9,6 +9,7 @@
 plugins/*
 !plugins/inhabitent-functionality/
 !plugins/inhabitent-business-hours/
+!plugins/inhabitent-contact-info/
 # Ignore everything in "themes" except the active theme. #
 themes/*
 !themes/inhabitent/
