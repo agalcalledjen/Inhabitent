@@ -282,6 +282,10 @@ h1 {
   font-size: 2.5rem;
   margin-top: 0; }
 
+.single h1 {
+  font-size: 2.1rem;
+  margin: 1.5rem 0; }
+
 h2 {
   font-size: 2rem;
   letter-spacing: 1.5px;
@@ -651,10 +655,7 @@ a {
 # Content
 --------------------------------------------------------------*/
 body {
-  margin: 0 auto;
-  /* This Should Be Equal to the Height of your
-  * fixed header bar. */
-  padding-top: 52.5px; }
+  margin: 0 auto; }
 
 .container {
   width: 1120px; }
@@ -720,6 +721,25 @@ body {
 
 .single-post .comment-metadata {
   color: #a1a1a1; }
+
+.children {
+  margin-left: 4rem; }
+
+.reply {
+  margin-bottom: 1.5rem; }
+
+.comment-body {
+  padding-top: 1.5rem;
+  margin-top: 0; }
+
+.children .odd .comment-body,
+.comment-list .even .comment-body {
+  border-top: 1px solid #e1e1e1; }
+
+.comment-reply-title {
+  margin-top: 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e1e1; }
 
 /*--------------------------------------------------------------
 # Media
@@ -806,7 +826,8 @@ object {
         align-self: flex-end; }
 
 .blog .content-area,
-.single .content-area {
+.single .content-area,
+.page-template-find-us .content-area {
   width: 73%;
   padding: 5px 55px 6rem 0;
   border-right: 1px solid #e1e1e1; }
@@ -864,10 +885,18 @@ object {
     background: #248A83;
     color: #fff; }
 
+.entry-content p {
+  margin-bottom: 1.5rem; }
+
 .post:last-child {
   margin-bottom: 6rem; }
 
 /* single-post - single.php */
+.single .comments-link a {
+  color: #fff; }
+  .single .comments-link a:hover {
+    color: #f0e4d1; }
+
 .entry-footer ul {
   margin: 1.5rem 0 4.5rem;
   display: -webkit-box;
@@ -886,6 +915,8 @@ object {
 /* About - about.php */
 .page-template-about .site-content {
   width: 100%; }
+  .page-template-about .site-content h1 {
+    font-size: 3rem; }
   .page-template-about .site-content .entry-content {
     width: 61%;
     margin: 0 auto;
@@ -1064,14 +1095,23 @@ object {
 # Header
 --------------------------------------------------------------*/
 .site-header {
-  border-bottom: 1px solid #e1e1e1;
   font-family: "Novecento", sans-serif;
   text-transform: uppercase;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 2000; }
+
+.home .site-header,
+.blog .site-header,
+.single .site-header,
+.page-template-find-us .site-header {
+  border-bottom: 1px solid #e1e1e1;
   background: rgba(255, 255, 255, 0.8); }
+
+.page-template-about .site-header {
+  border: 0;
+  background: transparent; }
 
 /* This will ensure your site looks correct
  * when the admin bar is displaying.
@@ -1110,9 +1150,30 @@ body.admin-bar .site-header {
     .main-navigation .search-form fieldset .search-field {
       display: none; }
     .main-navigation .search-form fieldset .search-submit {
-      color: #248A83;
       border: 0;
       background: none;
       -webkit-box-shadow: none;
               box-shadow: none;
       padding: 0; }
+
+.home .search-submit,
+.blog .search-submit,
+.single .search-submit,
+.page-template-find-us .search-submit {
+  color: #248A83; }
+
+.page-template-about .search-submit {
+  color: #fff;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6); }
+
+.home,
+.blog,
+.single,
+.page-template-find-us {
+  /* This Should Be Equal to the Height of your
+  * fixed header bar. */
+  padding-top: 52.5px; }
+
+.page-template-about {
+  padding-top: 0; }

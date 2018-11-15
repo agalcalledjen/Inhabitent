@@ -3,9 +3,6 @@
 --------------------------------------------------------------*/
 body {
   margin: 0 auto;
-  /* This Should Be Equal to the Height of your
-  * fixed header bar. */
-  padding-top: 52.5px;
 }
 
 .container {
@@ -92,4 +89,47 @@ body {
   .comment-metadata {
     color: $color__brand-lightgrey;
   }
+}
+
+// .children .odd {
+//   // text-indent: 40px;
+
+//   // img {
+//   //   width: 61.5%;
+//   // }
+
+
+
+//   // .comment-content {
+//   //   left: -$base__space-unit;
+//   // }
+//   left
+// }
+
+.children {
+  margin-left: 4rem;
+}
+
+.reply {
+  margin-bottom: $base__space-unit;
+}
+
+.comment-body {
+  padding-top: $base__space-unit;
+  margin-top: 0;
+}
+
+.children .odd,
+.comment-list .even {
+  .comment-body {
+    border-top: $border__solid;
+  }
+}
+
+.comment-list .even {}
+
+.comment-reply-title {
+  margin-top: 0;
+  padding-top: $base__space-unit;
+  border-top: $border__solid;
 }

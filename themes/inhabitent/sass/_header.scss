@@ -2,7 +2,6 @@
 # Header
 --------------------------------------------------------------*/
 .site-header {
-  border-bottom: $border__solid;
   font-family: $font__accent;
   text-transform: uppercase;
 
@@ -11,7 +10,20 @@
   top: 0;
   width: 100%;
   z-index: 2000;
+
+}
+
+.home .site-header,
+.blog .site-header,
+.single .site-header,
+.page-template-find-us .site-header {
+  border-bottom: $border__solid;
   background: rgba(255, 255, 255, 0.8);
+}
+
+.page-template-about .site-header {
+  border: 0;
+  background: transparent;
 }
 
 /* This will ensure your site looks correct
@@ -58,7 +70,6 @@ body.admin-bar .site-header {
       }
 
       .search-submit {
-        color: $color__brand-green;
         border: 0;
         background: none;
         box-shadow: none;
@@ -66,4 +77,29 @@ body.admin-bar .site-header {
       }
     }
   }
+}
+
+.home .search-submit,
+.blog .search-submit,
+.single .search-submit,
+.page-template-find-us .search-submit {
+  color: $color__brand-green;
+}
+
+.page-template-about .search-submit {
+  color: $color__background-body;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
+}
+
+.home,
+.blog,
+.single,
+.page-template-find-us {
+  /* This Should Be Equal to the Height of your
+  * fixed header bar. */
+  padding-top: 52.5px;
+}
+
+.page-template-about {
+  padding-top: 0;
 }
