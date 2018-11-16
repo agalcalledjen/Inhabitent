@@ -504,8 +504,6 @@ textarea {
   width: 175px;
   font-family: "Novecento", sans-serif;
   display: none;
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
   text-decoration: none; }
   .search-form .search-field:focus {
     border: none;

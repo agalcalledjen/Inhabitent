@@ -6,14 +6,13 @@
     $('.icon-search').on('click', function (event) {
       event.preventDefault();
 
-      $('.search-field').toggle();
+      $('.search-field').toggle(3000);
       $('.search-field').focus();
       // $('.search-field').blur();
       // to make the input field clear
       // $('.search-field').focus(function () {
       //   this.value = "";
       // }); 
-
     });
   });
 
