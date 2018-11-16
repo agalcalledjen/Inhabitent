@@ -68,8 +68,9 @@ body.admin-bar .site-header {
       border: none;
       padding: 0.75rem 0;
 
-      .search-field {
-        // display: none;
+      .icon-search {
+        color: $color__brand-green;
+        margin-left: $base__space-unit / 2;
       }
 
       .search-submit {
@@ -77,6 +78,7 @@ body.admin-bar .site-header {
         background: none;
         box-shadow: none;
         padding: 0 0 0 0.65rem;
+        width: 0;
       }
     }
   }

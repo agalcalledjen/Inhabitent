@@ -1167,10 +1167,13 @@ object {
       margin-left: 52%; }
 
 /* Archive Product - archive-product.php */
-.post-type-archive-product .content-area {
+/* Product Type - taxonomy-product_type.php */
+.post-type-archive-product .content-area,
+.tax-product_type .content-area {
   width: 100%;
   padding: 0 0 3rem; }
-  .post-type-archive-product .content-area .page-header {
+  .post-type-archive-product .content-area .page-header,
+  .tax-product_type .content-area .page-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1183,11 +1186,19 @@ object {
             align-items: center;
     border-bottom: 1px dashed #c8c8c8;
     margin-bottom: 3rem; }
-    .post-type-archive-product .content-area .page-header h2 {
+    .post-type-archive-product .content-area .page-header .page-title,
+    .tax-product_type .content-area .page-header .page-title {
       font-size: 2.5rem;
       color: #404040;
       margin-bottom: 1.5rem; }
-    .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper {
+    .post-type-archive-product .content-area .page-header .taxonomy-description,
+    .tax-product_type .content-area .page-header .taxonomy-description {
+      font-family: "Merriweather", serif;
+      font-weight: 100;
+      font-size: 1rem;
+      text-transform: capitalize; }
+    .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper,
+    .tax-product_type .content-area .page-header .archive-product-shop-wrapper {
       width: 30%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1199,7 +1210,8 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-      .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper h4 {
+      .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper h4,
+      .tax-product_type .content-area .page-header .archive-product-shop-wrapper h4 {
         font-family: "Novecento", sans-serif;
         font-size: 1.25rem;
         font-weight: 100; }
@@ -1235,7 +1247,7 @@ object {
         margin: 0.25rem 0 0.75rem; }
       .archive-product-wrapper .product-entry .archive-product-info .entry-title {
         color: #2f1339; }
-        .archive-product-wrapper .product-entry .archive-product-info .entry-title:after {
+        .archive-product-wrapper .product-entry .archive-product-info .entry-title .ellipsis:after {
           content: '...........................';
           -webkit-box-flex: 1;
               -ms-flex: 1;
@@ -1374,12 +1386,16 @@ body.admin-bar .site-header {
   .main-navigation .search-form fieldset {
     border: none;
     padding: 0.75rem 0; }
+    .main-navigation .search-form fieldset .icon-search {
+      color: #248A83;
+      margin-left: 0.75rem; }
     .main-navigation .search-form fieldset .search-submit {
       border: 0;
       background: none;
       -webkit-box-shadow: none;
               box-shadow: none;
-      padding: 0 0 0 0.65rem; }
+      padding: 0 0 0 0.65rem;
+      width: 0; }
 
 .blog .search-submit,
 .single .search-submit,

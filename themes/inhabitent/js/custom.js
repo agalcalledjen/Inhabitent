@@ -2,11 +2,18 @@
 
   $(document).ready(function () {
 
-
     // toggle search form
-    $('.search-submit').on('click', function () {
-      // event.preventDefault();
-      $('.search-field').toggle().blur();
+    $('.icon-search').on('click', function (event) {
+      event.preventDefault();
+
+      $('.search-field').toggle();
+      $('.search-field').focus();
+      // $('.search-field').blur();
+      // to make the input field clear
+      // $('.search-field').focus(function () {
+      //   this.value = "";
+      // }); 
+
     });
   });
 

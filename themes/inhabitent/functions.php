@@ -7,7 +7,7 @@
  * @package RED_Starter_Theme
  */
 
-if ( ! function_exists( 'red_starter_setup' ) ) :
+if ( ! function_exists( 'inhabitent_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */

@@ -25,7 +25,7 @@ function inhabitent_product() {
 		'update_item'           => 'Update Product',
 		'view_item'             => 'View Product',
 		'view_items'            => 'View Products',
-		'search_items'          => 'Search Product',
+		'search_items'          => 'Search Products',
 		'not_found'             => 'Product Not found',
 		'not_found_in_trash'    => 'Not found in Trash',
 		'featured_image'        => 'Featured Image',

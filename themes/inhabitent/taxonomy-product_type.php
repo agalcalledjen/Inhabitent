@@ -1,9 +1,9 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying all single products.
  *
  * @package RED_Starter_Theme
- *  Template Name: Archive Product Template
+ * Template Name: Product Type Template
  */
 
 get_header(); ?>
@@ -12,27 +12,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<header class="page-header">
-        <?php
-					the_archive_title( '<h2 class="page-title">', '</h2>' );
-				?>
-        <div class="archive-product-shop-wrapper">
-        <?php
-          // Get the terms for our products.
-          $terms = get_terms(array(
-            'taxonomy' => 'product_type',
-            'hide_empty' => 0, // false, hide
-          ));
+        <h2 class="page-title">
+          <?php single_term_title(); ?>
+        </h2>
+        <div class="taxonomy-description">
+          <?php the_archive_description(); ?>
+        <div>
+			</header><!-- .page-header -->
 
-          foreach($terms as $term): ?>
-            <div class="archive-shop-term">
-              <a href="<?php echo get_term_link($term); ?>">
-                <h4><?php echo $term->name; ?></h4>
-              </a>
-            </div><!-- .archive-shop-term -->
-        <?php endforeach; ?>
-      </div><!-- .archive-product-shop-wrapper -->
-    </header><!-- .page-header -->
-      
+			<?php /* Start the Loop */ ?>
     <div class="archive-product-wrapper">
     <?php 
     /**
@@ -59,7 +47,10 @@ get_header(); ?>
     <?php endwhile; // end of the loop. ?>
 
     </div><!-- #content -->
-    </main><!-- #main -->
-  </div><!-- #primary -->
-  
+
+
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
 <?php get_footer(); ?>
