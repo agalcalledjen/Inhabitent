@@ -12,7 +12,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<header class="page-header">
-        <h2>Shop Stuff</h2>
+        <?php
+					the_archive_title( '<h2 class="page-title">', '</h2>' );
+				?>
         <div class="archive-product-shop-wrapper">
         <?php
           // Get the terms for our products.

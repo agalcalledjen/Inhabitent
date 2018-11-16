@@ -494,6 +494,25 @@ textarea {
   color: #d99054; }
 
 /* Search Form */
+.search-form .search-field {
+  margin-top: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  height: 26px;
+  width: 175px;
+  font-family: "Novecento", sans-serif;
+  display: none;
+  -webkit-transition: 2s ease-in-out;
+  transition: 2s ease-in-out;
+  text-decoration: none; }
+  .search-form .search-field:focus {
+    border: none;
+    cursor: text;
+    outline: 0;
+    width: 175px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -1001,7 +1020,7 @@ object {
   background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../public/assets/images/home-hero.jpg");
   background-repeat: no-repeat;
   background-position: center center, left, center top;
-  background-size: 20%, cover, cover;
+  background-size: 275px, cover, cover;
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -1216,6 +1235,12 @@ object {
         margin: 0.25rem 0 0.75rem; }
       .archive-product-wrapper .product-entry .archive-product-info .entry-title {
         color: #2f1339; }
+        .archive-product-wrapper .product-entry .archive-product-info .entry-title:after {
+          content: '...........................';
+          -webkit-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          overflow: hidden; }
       .archive-product-wrapper .product-entry .archive-product-info .price {
         font-size: 0.9rem; }
 
@@ -1349,8 +1374,6 @@ body.admin-bar .site-header {
   .main-navigation .search-form fieldset {
     border: none;
     padding: 0.75rem 0; }
-    .main-navigation .search-form fieldset .search-field {
-      display: none; }
     .main-navigation .search-form fieldset .search-submit {
       border: 0;
       background: none;

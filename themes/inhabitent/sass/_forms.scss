@@ -65,32 +65,52 @@ textarea {
 /* Search Form */
 // .site-header .search-form {
 //   position: absolute;
-//   right: 200px;
-//   top: 200px;
+//   right: 0;
+//   top: 0;
 // }
 
-// .site-header .search-field {
+// .search-field {
+//   font-family: $font__accent;
+
 //   background-color: transparent;
 //   background-position: 5px center;
 //   background-repeat: no-repeat;
 //   background-size: 24px 24px;
 //   border: none;
 //   cursor: pointer;
-//   height: 37px;
+//   height: 28px;
 //   margin: 3px 0;
-//   padding: 0 0 0 34px;
+//   // padding: 0 0 0 34px;
 //   position: relative;
 //   transition: width 400ms ease, background 400ms ease;
-//   width: 0;
+//   width: 110px;
 // }
 
-// .site-header .search-field:focus {
-//   border: 2px solid #c3c0ab;
-//   cursor: text;
-//   outline: 0;
-//   width: 230px;
-// }
+
 
 // .search-form .search-submit {
-//   display: none;
+//   display: block;
 // }
+
+.search-form {
+  .search-field {
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    height: 26px;
+    width: 175px;
+    font-family: $font__accent;
+    display: none;
+    transition: 2s ease-in-out;
+    text-decoration: none;
+
+    &:focus {
+      border: none;
+      cursor: text;
+      outline: 0;
+      width: 175px;
+    }
+  }
+}

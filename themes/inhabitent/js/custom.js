@@ -1,9 +1,12 @@
 (function ($) {
 
   $(document).ready(function () {
+
+
     // toggle search form
-    $('#fa-search').on('click', function () {
-      $('.search-field').toggle('display: inline-block');
+    $('.search-submit').on('click', function () {
+      // event.preventDefault();
+      $('.search-field').toggle().blur();
     });
   });
 

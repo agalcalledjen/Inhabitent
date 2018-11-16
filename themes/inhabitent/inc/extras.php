@@ -115,3 +115,47 @@ function inhabitent_hero_banner(){
 }
 add_action('wp_enqueue_scripts', 'inhabitent_hero_banner');
 
+
+/** 
+ * Modify the Product post type archive loop */
+function inhabitent_mod_post_type_archive( $query ){
+  // want to check for ..
+  if(
+    ( is_post_type_archive( array( 'product' ) ) || $query->is_tax( 'product_type' ) )
+    // don't want to affect the admin loop
+    && !is_admin()
+    // only want to get the main query loop
+    && $query->is_main_query()
+  ){
+    $query->set( 'orderby', 'title' );
+    $query->set( 'order', 'ASC' );
+    $query->set( 'posts_per_page', 16 );
+  }
+}
+add_action('pre_get_posts','inhabitent_mod_post_type_archive');
+
+
+ /** 
+ * Filter the Product archive title 
+ * */ 
+function inhabitent_archive_title ( $title ){
+  // we don't want this to be applied to every archive on our page so we will use an else if stmt
+  if( is_post_type_archive('product') ){
+    $title = 'Shop Stuff';
+  } else if( is_tax('product_type') ){
+    // 
+    // %1$1 = token
+    $title = sprintf( '%1$1', single_term_title( '', false));
+  }
+  return $title;
+}
+add_filter('get_the_archive_title', 'inhabitent_archive_title'); 
+
+ /** 
+ * Replace the excerpt "Read More" 
+ * */ 
+// function inhabitent_excerpt_more( $more ){
+//   global $post;
+//   return '<a class="read-more" href="' . get_permalink( $post->ID ) . '">Read More</a>' ;
+// }
+// add_filter('excerpt_more','inhabitent_except_more');

@@ -211,7 +211,7 @@
       url("../../public/assets/images/home-hero.jpg");
     background-repeat: no-repeat;
     background-position: center center, left, center top;
-    background-size: 20%, cover, cover;
+    background-size: 275px, cover, cover;
 
     // color: white;
 
@@ -429,6 +429,12 @@
 
       .entry-title {
         color: $color__brand-purple;
+
+        &:after {
+          content: '...........................';
+          flex: 1;
+          overflow: hidden;
+        }
       }
 
       .price {
