@@ -13,7 +13,7 @@
 
 }
 
-.home .site-header,
+// .home .site-header,
 .blog .site-header,
 .single .site-header,
 .page-template-find-us .site-header,
@@ -23,7 +23,8 @@
   background: rgba(255, 255, 255, 0.8);
 }
 
-.page-template-about .site-header {
+.page-template-about .site-header,
+.home .site-header {
   border: 0;
   background: transparent;
 }
@@ -81,7 +82,7 @@ body.admin-bar .site-header {
   }
 }
 
-.home .search-submit,
+// .home .search-submit,
 .blog .search-submit,
 .single .search-submit,
 .page-template-find-us .search-submit,
@@ -90,12 +91,13 @@ body.admin-bar .site-header {
   color: $color__brand-green;
 }
 
-.page-template-about .search-submit {
+.page-template-about .search-submit,
+.home .search-submit {
   color: $color__background-body;
   box-shadow: 0 0 1rem rgba(0, 0, 0, .6);
 }
 
-.home,
+// .home,
 .blog,
 .single,
 .page-template-find-us,
@@ -106,6 +108,7 @@ body.admin-bar .site-header {
   padding-top: 52.5px;
 }
 
+.home,
 .page-template-about {
   padding-top: 0;
 }

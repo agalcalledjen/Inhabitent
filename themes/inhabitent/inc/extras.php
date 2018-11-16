@@ -114,3 +114,4 @@ function inhabitent_hero_banner(){
   wp_add_inline_style('inhabitent-style', $hero_css);
 }
 add_action('wp_enqueue_scripts', 'inhabitent_hero_banner');
+

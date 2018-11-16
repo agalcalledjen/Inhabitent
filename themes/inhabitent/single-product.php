@@ -24,13 +24,8 @@ get_header(); ?>
           <?php if ( has_post_thumbnail() ) : ?>
             <?php the_post_thumbnail( 'large' ); ?>
           <?php endif; ?>
-
-          
-
-          <!-- <div class="entry-meta">
-            <?php inhabitent_posted_on(); ?> / <?php inhabitent_comment_count(); ?> / <?php inhabitent_posted_by(); ?>
-          </div>.entry-meta -->
         </header><!-- .entry-header -->
+        
         <div class="entry-content">
         <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
           <!-- this looks to see if there is a price field and then shows it -->

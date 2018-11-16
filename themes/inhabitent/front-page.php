@@ -18,24 +18,28 @@ get_header(); ?>
 				</header>
 			<?php endif; ?>
 
-			<!-- <?php /* Start the Loop */ ?>
+			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <header class="entry-header">
-            <?php if ( has_post_thumbnail() ) : ?>
-              <?php the_post_thumbnail( 'large' ); ?>
-            <?php endif; ?>
+            <div class="header-banner">
+              <!-- <?php if ( has_post_thumbnail() ) : ?>
+                <?php the_post_thumbnail( 'large' ); ?>
+              <?php endif; ?> -->
+            </div> 
 
-            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+            <!-- <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?> -->
+
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/assets/images/logos/inhabitent-logo-full.svg" alt="Inhabitent Logo Full" class="home-logo"/> -->
 
             <?php if ( 'post' === get_post_type() ) : ?>
-            <div class="entry-meta">
+            <!-- <div class="entry-meta">
               <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
-            </div><!-- .entry-meta -->
+            </div>.entry-meta -->
             <?php endif; ?>
           </header><!-- .entry-header -->
-        </article><br><!-- #post-## -->
+       
 
 			<?php endwhile; ?>
 
@@ -47,7 +51,7 @@ get_header(); ?>
 
     <?php endif; ?> 
     <!-- end of default loop -->
-
+<div class="entry-content">
     <section class="frontpage-shop">
       <h2>Shop Stuff</h2>
       <div class="frontpage-shop-wrapper">
@@ -67,9 +71,7 @@ get_header(); ?>
             <a href="<?php echo get_term_link($term); ?>"><button><?php echo $term->name; ?> Stuff</button></a>
             
           </div>
-        <?php endforeach;
-
-      ?>
+        <?php endforeach; ?>
       </div>
     </section>
 
@@ -113,7 +115,8 @@ get_header(); ?>
           <?php endforeach; wp_reset_postdata(); ?>
         </div>
       </section>
-
+            </div>
+      </article><!-- #post-## -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

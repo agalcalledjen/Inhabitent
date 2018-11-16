@@ -41,7 +41,8 @@
 .blog .content-area,
 .single-post .content-area,
 .page-template-find-us .content-area,
-.search-results .content-area {
+.search-results .content-area,
+.archive.date .content-area {
   // grid-area: main;
   width: 73%;
   padding: 5px 55px $base__space-unit*4 0;
@@ -50,14 +51,16 @@
 
 .blog .widget-area,
 .single-post .widget-area,
-.search-results .widget-area {
+.search-results .widget-area,
+.archive.date .widget-area {
   // grid-area: sidebar;
   width: 27%;
   align-self: flex-start;
 }
 
 .blog .entry-header,
-.single-post .entry-header {
+.single-post .entry-header,
+.archive.date .entry-header {
   position: relative;
   color: #fff;
 
@@ -171,31 +174,58 @@
 
 
 /* About - about.php */
-.page-template-about .site-content {
+.page-template-about .site-content,
+.home .site-content {
   width: 100%;
 
   h1 {
     font-size: $font__size * 3;
   }
 
+  h2 {
+    text-align: center;
+  }
+}
+
+.page-template-about article,
+.home article {
+  margin-top: 0;
+}
+
+.page-template-about .site-content {
   .entry-content {
     width: 61%;
     margin: 0 auto;
     padding-top: $base__space-unit;
     padding-bottom: $base__space-unit * 2;
-
-    h2 {
-      text-align: center;
-    }
   }
 }
 
-.page-template-about article {
-  margin-top: 0;
+/* Homepage - front-page.php */
+.home .entry-header {
+
+  .header-banner {
+    // margin-top: 119px;
+    background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
+
+      url("../../public/assets/images/home-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center, left, center top;
+    background-size: 20%, cover, cover;
+
+    // color: white;
+
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-/* Homepage - front-page.php */
 .home .content-area {
+  width: 100%;
 
   h2 {
     text-align: center;
@@ -244,7 +274,6 @@
   }
 }
 
-
 .frontpage-journal {
   margin-bottom: $base__space-unit * 3;
 
@@ -269,7 +298,7 @@
 
       .entry-meta,
       .entry-date {
-        font-family: 'Merriweather';
+        font-family: $font__main;
         text-transform: capitalize;
         font-size: $font__size * 0.8;
       }
@@ -281,6 +310,14 @@
     }
   }
 }
+
+.home .entry-content {
+  width: 1120px;
+  margin: 0 auto;
+  padding-top: $base__space-unit;
+  padding-bottom: $base__space-unit * 2;
+}
+
 
 /* Single Product - single-product.php */
 .single-product .content-area {
@@ -325,6 +362,78 @@
       margin-left: 52%;
     }
   }
+}
 
+/* Archive Product - archive-product.php */
+.post-type-archive-product .content-area {
+  width: 100%;
+  padding: 0 0 $base__space-unit * 2;
 
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: $border__dashed;
+    margin-bottom: $base__space-unit * 2;
+
+    h2 {
+      font-size: $font__size * 2.5;
+      color: $color__text-main;
+      margin-bottom: $base__space-unit;
+    }
+
+    .archive-product-shop-wrapper {
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      h4 {
+        font-family: $font__accent;
+        font-size: $font__size * 1.25;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.archive-product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .product-entry {
+    width: 23%;
+    border: $border__solid;
+    margin-bottom: $base__space-unit;
+
+    a {
+      // border-bottom: 5px solid #e1e1e1;
+
+      img {
+        height: 258px;
+        object-fit: cover;
+        border-bottom: 5px solid #e1e1e1;
+      }
+    }
+
+    .archive-product-info {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .entry-title,
+      .price {
+        margin: 0.25rem 0 0.75rem;
+      }
+
+      .entry-title {
+        color: $color__brand-purple;
+      }
+
+      .price {
+        font-size: $font__size * 0.9;
+      }
+    }
+  }
 }
