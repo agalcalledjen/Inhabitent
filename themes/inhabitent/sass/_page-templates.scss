@@ -2,10 +2,6 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
-
-
-/* Journal - index.php */
 .hfeed.site {
   overflow: hidden;
   display: grid;
@@ -24,11 +20,6 @@
     margin: 0 auto;
 
     overflow: hidden;
-    // display: grid;
-    // grid-template-columns: 3fr 1fr;
-    // // grid-template-rows: minmax(max-content, 100px);
-    // grid-template-areas:
-    //   'main main main sidebar';
     display: flex;
   }
 
@@ -37,6 +28,8 @@
     align-self: flex-end;
   }
 }
+
+
 
 .blog .content-area,
 .single-post .content-area,
@@ -101,7 +94,7 @@
   .button {
     border: 1px solid #000;
     border-radius: 0;
-    background: $color__background-body;
+    background: transparent;
     color: $color__text-main;
     font-size: $font__size * 0.9;
     font-family: $font__accent;
@@ -130,30 +123,6 @@
   margin-bottom: $base__space-unit * 4;
 }
 
-/* single-post - single.php */
-.single-post .comments-link {
-
-  a {
-    color: $color__background-body;
-
-    &:hover {
-      color: $color__brand-yellow;
-    }
-  }
-}
-
-.entry-footer {
-  ul {
-    margin: $base__space-unit 0 $base__space-unit*3;
-    display: flex;
-
-    li {
-      padding-right: 3px;
-    }
-  }
-}
-
-
 /* Find Us - find-us.php */
 .entry-content {
 
@@ -165,13 +134,6 @@
     }
   }
 }
-
-/* Single Product - single-product.php */
-// .single-product .content-area {
-//   padding-right: 0;
-//   border: 0;
-// }
-
 
 /* About - about.php */
 .page-template-about .site-content,
@@ -198,326 +160,5 @@
     margin: 0 auto;
     padding-top: $base__space-unit;
     padding-bottom: $base__space-unit * 2;
-  }
-}
-
-/* Homepage - front-page.php */
-.home .entry-header {
-
-  .header-banner {
-    // margin-top: 119px;
-    background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
-
-      url("../../public/assets/images/home-hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center center, left, center top;
-    background-size: 275px, cover, cover;
-
-    // color: white;
-
-    height: 100vh;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.home .content-area {
-  width: 100%;
-
-  h2 {
-    text-align: center;
-    font-family: $font__accent;
-    font-weight: 100;
-    font-size: 2.5rem;
-  }
-
-  .frontpage-term {
-    width: 23.5%;
-    align-items: center;
-    text-align: center;
-    padding: $base__space-unit / 2;
-    border-top: 5px solid #e1e1e1;
-
-    &:hover {
-      border-color: $color__brand-orange;
-    }
-
-    img {
-      width: 30%;
-    }
-  }
-}
-
-.frontpage-shop,
-.frontpage-journal,
-.frontpage-adventure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .frontpage-shop-wrapper,
-  .frontpage-journal-wrapper,
-  .frontpage-adventure-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    .frontpage-term,
-    .journal-entry {
-      border-right: $border__solid;
-      border-bottom: $border__solid;
-      border-left: $border__solid;
-
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
-.frontpage-journal {
-  margin-bottom: $base__space-unit * 3;
-
-  h2 {
-    margin-top: $base__space-unit * 3;
-  }
-
-  .journal-entry {
-    width: 32%;
-    margin-top: $base__space-unit;
-    border-top: 1px solid #e1e1e1;
-
-    img {
-      border-bottom: 5px solid #e1e1e1;
-    }
-
-    .journal-entry-info {
-      padding: $base__space-unit / 2;
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-
-      .entry-meta,
-      .entry-date {
-        font-family: $font__main;
-        text-transform: capitalize;
-        font-size: $font__size * 0.8;
-      }
-
-      .button {
-        align-self: flex-start;
-        padding: .5rem 1.5rem;
-      }
-    }
-  }
-}
-
-.home .entry-content {
-  width: 1120px;
-  margin: 0 auto;
-  padding-top: $base__space-unit;
-  padding-bottom: $base__space-unit * 2;
-}
-
-.frontpage-adventure-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  .adventure-entry {
-    position: relative;
-
-    img {
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .adventure-entry-info {
-      position: absolute;
-      left: 0;
-      top: $base__space-unit / 2;
-      padding: $base__space-unit/2 $base__space-unit;
-
-      h4 {
-        font-family: $font__main;
-        font-weight: 100;
-        font-size: 3rem;
-        text-transform: capitalize;
-        color: $color__background-body;
-      }
-
-    }
-  }
-
-  .adventure-entry:first-child {
-    width: 49%;
-
-    img {
-      height: 548.8px;
-    }
-
-  }
-
-  .adventure-entry:nth-child(2) {
-    width: 49%;
-
-    img {
-      height: 272px;
-    }
-  }
-
-  .adventure-entry:nth-child(3),
-  .adventure-entry:last-child {
-    width: 24.5%;
-
-    img {
-      height: 272px;
-    }
-  }
-}
-
-
-/* Single Product - single-product.php */
-.single-product .content-area {
-  width: 100%;
-  padding: 0 0 $base__space-unit * 3;
-  border: 0;
-
-  .type-product {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    .entry-header {
-      width: 48%;
-    }
-
-    .entry-content {
-      width: 48%;
-      margin-top: 0;
-
-      h2 {
-        font-size: $font__size * 2.5;
-        color: $color__brand-orange;
-        margin: 0;
-        line-height: 1;
-      }
-
-      .price {
-        font-family: $font__accent;
-        font-size: $font__size * 1.8;
-        margin: $base__space-unit / 2 0;
-      }
-
-      span {
-        font-family: $font__main;
-        text-transform: capitalize;
-      }
-    }
-
-    .entry-footer {
-      width: 48%;
-      margin-left: 52%;
-    }
-  }
-}
-
-/* Archive Product - archive-product.php */
-/* Product Type - taxonomy-product_type.php */
-.post-type-archive-product .content-area,
-.tax-product_type .content-area {
-  width: 100%;
-  padding: 0 0 $base__space-unit * 2;
-
-  .page-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: $border__dashed;
-    margin-bottom: $base__space-unit * 2;
-
-    .page-title {
-      font-size: $font__size * 2.5;
-      color: $color__text-main;
-      margin-bottom: $base__space-unit;
-    }
-
-    .taxonomy-description {
-      font-family: $font__main;
-      font-weight: 100;
-      font-size: $font__size;
-      text-transform: capitalize;
-
-      p {
-        margin-top: 0;
-        margin-bottom: $base__space-unit * 2;
-      }
-    }
-
-    .archive-product-shop-wrapper {
-      width: 30%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      h4 {
-        font-family: $font__accent;
-        font-size: $font__size * 1.25;
-        font-weight: 100;
-      }
-    }
-  }
-}
-
-.archive-product-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  .product-entry {
-    width: 23%;
-    border: $border__solid;
-    margin-bottom: $base__space-unit;
-
-    a {
-      // border-bottom: 5px solid #e1e1e1;
-
-      img {
-        height: 258px;
-        object-fit: cover;
-        border-bottom: 5px solid #e1e1e1;
-      }
-    }
-
-    .archive-product-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0 1rem;
-
-      .entry-title,
-      .price {
-        margin: 0.25rem 0 0.75rem;
-      }
-
-      .entry-title {
-        color: $color__brand-purple;
-      }
-
-      .ellipsis {
-        flex: 1;
-        overflow: hidden;
-
-        &:after {
-          content: '...........................';
-
-        }
-      }
-
-      .price {
-        font-size: $font__size * 0.9;
-      }
-    }
   }
 }

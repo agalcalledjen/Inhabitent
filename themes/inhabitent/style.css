@@ -872,8 +872,6 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
-/* Journal - index.php */
 .hfeed.site {
   overflow: hidden;
   display: grid;
@@ -950,7 +948,7 @@ object {
 .search-results .button {
   border: 1px solid #000;
   border-radius: 0;
-  background: #fff;
+  background: transparent;
   color: #404040;
   font-size: 0.9rem;
   font-family: "Novecento", sans-serif;
@@ -970,27 +968,12 @@ object {
 .post:last-child {
   margin-bottom: 6rem; }
 
-/* single-post - single.php */
-.single-post .comments-link a {
-  color: #fff; }
-  .single-post .comments-link a:hover {
-    color: #f0e4d1; }
-
-.entry-footer ul {
-  margin: 1.5rem 0 4.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .entry-footer ul li {
-    padding-right: 3px; }
-
 /* Find Us - find-us.php */
 .entry-content figure {
   margin: 1.5rem 0; }
   .entry-content figure iframe {
     border: none; }
 
-/* Single Product - single-product.php */
 /* About - about.php */
 .page-template-about .site-content,
 .home .site-content {
@@ -1011,315 +994,6 @@ object {
   margin: 0 auto;
   padding-top: 1.5rem;
   padding-bottom: 3rem; }
-
-/* Homepage - front-page.php */
-.home .entry-header .header-banner {
-  background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../public/assets/images/home-hero.jpg");
-  background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../public/assets/images/home-hero.jpg");
-  background-repeat: no-repeat;
-  background-position: center center, left, center top;
-  background-size: 275px, cover, cover;
-  height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-
-.home .content-area {
-  width: 100%; }
-  .home .content-area h2 {
-    text-align: center;
-    font-family: "Novecento", sans-serif;
-    font-weight: 100;
-    font-size: 2.5rem; }
-  .home .content-area .frontpage-term {
-    width: 23.5%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    padding: 0.75rem;
-    border-top: 5px solid #e1e1e1; }
-    .home .content-area .frontpage-term:hover {
-      border-color: #d99054; }
-    .home .content-area .frontpage-term img {
-      width: 30%; }
-
-.frontpage-shop,
-.frontpage-journal,
-.frontpage-adventure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
-  .frontpage-shop .frontpage-shop-wrapper,
-  .frontpage-shop .frontpage-journal-wrapper,
-  .frontpage-shop .frontpage-adventure-wrapper,
-  .frontpage-journal .frontpage-shop-wrapper,
-  .frontpage-journal .frontpage-journal-wrapper,
-  .frontpage-journal .frontpage-adventure-wrapper,
-  .frontpage-adventure .frontpage-shop-wrapper,
-  .frontpage-adventure .frontpage-journal-wrapper,
-  .frontpage-adventure .frontpage-adventure-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .frontpage-shop .frontpage-shop-wrapper .frontpage-term,
-    .frontpage-shop .frontpage-shop-wrapper .journal-entry,
-    .frontpage-shop .frontpage-journal-wrapper .frontpage-term,
-    .frontpage-shop .frontpage-journal-wrapper .journal-entry,
-    .frontpage-shop .frontpage-adventure-wrapper .frontpage-term,
-    .frontpage-shop .frontpage-adventure-wrapper .journal-entry,
-    .frontpage-journal .frontpage-shop-wrapper .frontpage-term,
-    .frontpage-journal .frontpage-shop-wrapper .journal-entry,
-    .frontpage-journal .frontpage-journal-wrapper .frontpage-term,
-    .frontpage-journal .frontpage-journal-wrapper .journal-entry,
-    .frontpage-journal .frontpage-adventure-wrapper .frontpage-term,
-    .frontpage-journal .frontpage-adventure-wrapper .journal-entry,
-    .frontpage-adventure .frontpage-shop-wrapper .frontpage-term,
-    .frontpage-adventure .frontpage-shop-wrapper .journal-entry,
-    .frontpage-adventure .frontpage-journal-wrapper .frontpage-term,
-    .frontpage-adventure .frontpage-journal-wrapper .journal-entry,
-    .frontpage-adventure .frontpage-adventure-wrapper .frontpage-term,
-    .frontpage-adventure .frontpage-adventure-wrapper .journal-entry {
-      border-right: 1px solid #e1e1e1;
-      border-bottom: 1px solid #e1e1e1;
-      border-left: 1px solid #e1e1e1;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-
-.frontpage-journal {
-  margin-bottom: 4.5rem; }
-  .frontpage-journal h2 {
-    margin-top: 4.5rem; }
-  .frontpage-journal .journal-entry {
-    width: 32%;
-    margin-top: 1.5rem;
-    border-top: 1px solid #e1e1e1; }
-    .frontpage-journal .journal-entry img {
-      border-bottom: 5px solid #e1e1e1; }
-    .frontpage-journal .journal-entry .journal-entry-info {
-      padding: 0.75rem;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      text-align: left; }
-      .frontpage-journal .journal-entry .journal-entry-info .entry-meta,
-      .frontpage-journal .journal-entry .journal-entry-info .entry-date {
-        font-family: "Merriweather", serif;
-        text-transform: capitalize;
-        font-size: 0.8rem; }
-      .frontpage-journal .journal-entry .journal-entry-info .button {
-        -ms-flex-item-align: start;
-            align-self: flex-start;
-        padding: .5rem 1.5rem; }
-
-.home .entry-content {
-  width: 1120px;
-  margin: 0 auto;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem; }
-
-.frontpage-adventure-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .frontpage-adventure-wrapper .adventure-entry {
-    position: relative; }
-    .frontpage-adventure-wrapper .adventure-entry img {
-      -o-object-fit: cover;
-         object-fit: cover;
-      -o-object-position: center;
-         object-position: center; }
-    .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info {
-      position: absolute;
-      left: 0;
-      top: 0.75rem;
-      padding: 0.75rem 1.5rem; }
-      .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info h4 {
-        font-family: "Merriweather", serif;
-        font-weight: 100;
-        font-size: 3rem;
-        text-transform: capitalize;
-        color: #fff; }
-  .frontpage-adventure-wrapper .adventure-entry:first-child {
-    width: 49%; }
-    .frontpage-adventure-wrapper .adventure-entry:first-child img {
-      height: 548.8px; }
-  .frontpage-adventure-wrapper .adventure-entry:nth-child(2) {
-    width: 49%; }
-    .frontpage-adventure-wrapper .adventure-entry:nth-child(2) img {
-      height: 272px; }
-  .frontpage-adventure-wrapper .adventure-entry:nth-child(3),
-  .frontpage-adventure-wrapper .adventure-entry:last-child {
-    width: 24.5%; }
-    .frontpage-adventure-wrapper .adventure-entry:nth-child(3) img,
-    .frontpage-adventure-wrapper .adventure-entry:last-child img {
-      height: 272px; }
-
-/* Single Product - single-product.php */
-.single-product .content-area {
-  width: 100%;
-  padding: 0 0 4.5rem;
-  border: 0; }
-  .single-product .content-area .type-product {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .single-product .content-area .type-product .entry-header {
-      width: 48%; }
-    .single-product .content-area .type-product .entry-content {
-      width: 48%;
-      margin-top: 0; }
-      .single-product .content-area .type-product .entry-content h2 {
-        font-size: 2.5rem;
-        color: #d99054;
-        margin: 0;
-        line-height: 1; }
-      .single-product .content-area .type-product .entry-content .price {
-        font-family: "Novecento", sans-serif;
-        font-size: 1.8rem;
-        margin: 0.75rem 0; }
-      .single-product .content-area .type-product .entry-content span {
-        font-family: "Merriweather", serif;
-        text-transform: capitalize; }
-    .single-product .content-area .type-product .entry-footer {
-      width: 48%;
-      margin-left: 52%; }
-
-/* Archive Product - archive-product.php */
-/* Product Type - taxonomy-product_type.php */
-.post-type-archive-product .content-area,
-.tax-product_type .content-area {
-  width: 100%;
-  padding: 0 0 3rem; }
-  .post-type-archive-product .content-area .page-header,
-  .tax-product_type .content-area .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: 1px dashed #c8c8c8;
-    margin-bottom: 3rem; }
-    .post-type-archive-product .content-area .page-header .page-title,
-    .tax-product_type .content-area .page-header .page-title {
-      font-size: 2.5rem;
-      color: #404040;
-      margin-bottom: 1.5rem; }
-    .post-type-archive-product .content-area .page-header .taxonomy-description,
-    .tax-product_type .content-area .page-header .taxonomy-description {
-      font-family: "Merriweather", serif;
-      font-weight: 100;
-      font-size: 1rem;
-      text-transform: capitalize; }
-      .post-type-archive-product .content-area .page-header .taxonomy-description p,
-      .tax-product_type .content-area .page-header .taxonomy-description p {
-        margin-top: 0;
-        margin-bottom: 3rem; }
-    .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper,
-    .tax-product_type .content-area .page-header .archive-product-shop-wrapper {
-      width: 30%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper h4,
-      .tax-product_type .content-area .page-header .archive-product-shop-wrapper h4 {
-        font-family: "Novecento", sans-serif;
-        font-size: 1.25rem;
-        font-weight: 100; }
-
-.archive-product-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .archive-product-wrapper .product-entry {
-    width: 23%;
-    border: 1px solid #e1e1e1;
-    margin-bottom: 1.5rem; }
-    .archive-product-wrapper .product-entry a img {
-      height: 258px;
-      -o-object-fit: cover;
-         object-fit: cover;
-      border-bottom: 5px solid #e1e1e1; }
-    .archive-product-wrapper .product-entry .archive-product-info {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: baseline;
-          -ms-flex-align: baseline;
-              align-items: baseline;
-      padding: 0 1rem; }
-      .archive-product-wrapper .product-entry .archive-product-info .entry-title,
-      .archive-product-wrapper .product-entry .archive-product-info .price {
-        margin: 0.25rem 0 0.75rem; }
-      .archive-product-wrapper .product-entry .archive-product-info .entry-title {
-        color: #2f1339; }
-      .archive-product-wrapper .product-entry .archive-product-info .ellipsis {
-        -webkit-box-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-        overflow: hidden; }
-        .archive-product-wrapper .product-entry .archive-product-info .ellipsis:after {
-          content: '...........................'; }
-      .archive-product-wrapper .product-entry .archive-product-info .price {
-        font-size: 0.9rem; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -1489,3 +1163,343 @@ body.admin-bar .site-header {
   padding-top: 0; }
 
 /* Navigation */
+/*--------------------------------------------------------------
+# Page Template - Front Page - front-page.php
+--------------------------------------------------------------*/
+.home .entry-header .header-banner {
+  background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("../../public/assets/images/home-hero.jpg");
+  background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../public/assets/images/home-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center, left, center top;
+  background-size: 275px, cover, cover;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.home .content-area {
+  width: 100%; }
+  .home .content-area h2 {
+    text-align: center;
+    font-family: "Novecento", sans-serif;
+    font-weight: 100;
+    font-size: 2.5rem; }
+  .home .content-area .frontpage-term {
+    width: 23.5%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    border-top: 5px solid #e1e1e1; }
+    .home .content-area .frontpage-term:hover {
+      border-color: #d99054; }
+    .home .content-area .frontpage-term img {
+      width: 30%; }
+
+.frontpage-shop,
+.frontpage-journal,
+.frontpage-adventure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .frontpage-shop .frontpage-shop-wrapper,
+  .frontpage-shop .frontpage-journal-wrapper,
+  .frontpage-journal .frontpage-shop-wrapper,
+  .frontpage-journal .frontpage-journal-wrapper,
+  .frontpage-adventure .frontpage-shop-wrapper,
+  .frontpage-adventure .frontpage-journal-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .frontpage-shop .frontpage-shop-wrapper .frontpage-term,
+    .frontpage-shop .frontpage-shop-wrapper .journal-entry,
+    .frontpage-shop .frontpage-journal-wrapper .frontpage-term,
+    .frontpage-shop .frontpage-journal-wrapper .journal-entry,
+    .frontpage-journal .frontpage-shop-wrapper .frontpage-term,
+    .frontpage-journal .frontpage-shop-wrapper .journal-entry,
+    .frontpage-journal .frontpage-journal-wrapper .frontpage-term,
+    .frontpage-journal .frontpage-journal-wrapper .journal-entry,
+    .frontpage-adventure .frontpage-shop-wrapper .frontpage-term,
+    .frontpage-adventure .frontpage-shop-wrapper .journal-entry,
+    .frontpage-adventure .frontpage-journal-wrapper .frontpage-term,
+    .frontpage-adventure .frontpage-journal-wrapper .journal-entry {
+      border-right: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      border-left: 1px solid #e1e1e1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+
+.frontpage-journal {
+  margin-bottom: 4.5rem; }
+  .frontpage-journal h2 {
+    margin-top: 4.5rem; }
+  .frontpage-journal .journal-entry {
+    width: 32%;
+    margin-top: 1.5rem;
+    border-top: 1px solid #e1e1e1; }
+    .frontpage-journal .journal-entry img {
+      border-bottom: 5px solid #e1e1e1; }
+    .frontpage-journal .journal-entry .journal-entry-info {
+      padding: 0.75rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-align: left; }
+      .frontpage-journal .journal-entry .journal-entry-info .entry-meta,
+      .frontpage-journal .journal-entry .journal-entry-info .entry-date {
+        font-family: "Merriweather", serif;
+        text-transform: capitalize;
+        font-size: 0.8rem; }
+      .frontpage-journal .journal-entry .journal-entry-info .button {
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        padding: .5rem 1.5rem; }
+
+.home .entry-content {
+  width: 1120px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem; }
+
+/* Adventure Entries */
+.frontpage-adventure {
+  margin-bottom: 1.5rem; }
+  .frontpage-adventure h2 {
+    margin-top: 0; }
+
+.frontpage-adventure-wrapper {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 274px 274px 46px; }
+  .frontpage-adventure-wrapper .adventure-entry {
+    position: relative; }
+    .frontpage-adventure-wrapper .adventure-entry img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+      height: 100%; }
+    .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info {
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      padding: 0.75rem 1.5rem; }
+      .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info h4 {
+        font-family: "Merriweather", serif;
+        font-weight: 100;
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: #fff; }
+      .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info .button {
+        border-color: #fff;
+        color: #fff; }
+        .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info .button:hover {
+          border-color: #248A83; }
+  .frontpage-adventure-wrapper .adventure-entry:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3; }
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(2) {
+    grid-column: 3 / 5;
+    grid-row: 1; }
+    .frontpage-adventure-wrapper .adventure-entry:nth-child(2) .adventure-entry-info h4 {
+      font-size: 2.5rem; }
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(3),
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(4) {
+    grid-row: 2; }
+    .frontpage-adventure-wrapper .adventure-entry:nth-child(3) .adventure-entry-info h4,
+    .frontpage-adventure-wrapper .adventure-entry:nth-child(4) .adventure-entry-info h4 {
+      font-size: 1.75rem; }
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(3) {
+    grid-column: 3; }
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(4) {
+    grid-column: 4; }
+  .frontpage-adventure-wrapper a {
+    grid-row: 3; }
+    .frontpage-adventure-wrapper a button {
+      font-size: 1.25rem;
+      padding: .25rem 1.2rem; }
+
+/*--------------------------------------------------------------
+# Journal
+--------------------------------------------------------------*/
+/* Journal - index.php */
+/* single-post - single.php */
+.single-post .comments-link a {
+  color: #fff; }
+  .single-post .comments-link a:hover {
+    color: #f0e4d1; }
+
+.entry-footer ul {
+  margin: 1.5rem 0 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .entry-footer ul li {
+    padding-right: 3px; }
+
+/*--------------------------------------------------------------
+# Page Template - Products
+--------------------------------------------------------------*/
+/* Single Product - single-product.php */
+.single-product .content-area {
+  width: 100%;
+  padding: 0 0 4.5rem;
+  border: 0; }
+  .single-product .content-area .type-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .single-product .content-area .type-product .entry-header {
+      width: 48%; }
+    .single-product .content-area .type-product .entry-content {
+      width: 48%;
+      margin-top: 0; }
+      .single-product .content-area .type-product .entry-content h2 {
+        font-size: 2.5rem;
+        color: #d99054;
+        margin: 0;
+        line-height: 1; }
+      .single-product .content-area .type-product .entry-content .price {
+        font-family: "Novecento", sans-serif;
+        font-size: 1.8rem;
+        margin: 0.75rem 0; }
+      .single-product .content-area .type-product .entry-content span {
+        font-family: "Merriweather", serif;
+        text-transform: capitalize; }
+    .single-product .content-area .type-product .entry-footer {
+      width: 48%;
+      margin-left: 52%; }
+
+/* Archive Product - archive-product.php */
+/* Product Type - taxonomy-product_type.php */
+.post-type-archive-product .content-area,
+.tax-product_type .content-area {
+  width: 100%;
+  padding: 0 0 3rem; }
+  .post-type-archive-product .content-area .page-header,
+  .tax-product_type .content-area .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 3rem; }
+    .post-type-archive-product .content-area .page-header .page-title,
+    .tax-product_type .content-area .page-header .page-title {
+      font-size: 2.5rem;
+      color: #404040;
+      margin-bottom: 1.5rem; }
+    .post-type-archive-product .content-area .page-header .taxonomy-description,
+    .tax-product_type .content-area .page-header .taxonomy-description {
+      font-family: "Merriweather", serif;
+      font-weight: 100;
+      font-size: 1rem;
+      text-transform: capitalize; }
+      .post-type-archive-product .content-area .page-header .taxonomy-description p,
+      .tax-product_type .content-area .page-header .taxonomy-description p {
+        margin-top: 0;
+        margin-bottom: 3rem; }
+    .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper,
+    .tax-product_type .content-area .page-header .archive-product-shop-wrapper {
+      width: 30%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper h4,
+      .tax-product_type .content-area .page-header .archive-product-shop-wrapper h4 {
+        font-family: "Novecento", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 100; }
+
+.archive-product-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .archive-product-wrapper .product-entry {
+    width: 23%;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 1.5rem; }
+    .archive-product-wrapper .product-entry a img {
+      height: 258px;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-bottom: 5px solid #e1e1e1; }
+    .archive-product-wrapper .product-entry .archive-product-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      padding: 0 1rem; }
+      .archive-product-wrapper .product-entry .archive-product-info .entry-title,
+      .archive-product-wrapper .product-entry .archive-product-info .price {
+        margin: 0.25rem 0 0.75rem; }
+      .archive-product-wrapper .product-entry .archive-product-info .entry-title {
+        color: #2f1339; }
+      .archive-product-wrapper .product-entry .archive-product-info .ellipsis {
+        margin: 0 3px;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        overflow: hidden; }
+        .archive-product-wrapper .product-entry .archive-product-info .ellipsis:after {
+          content: '...........................'; }
+      .archive-product-wrapper .product-entry .archive-product-info .price {
+        font-size: 0.9rem; }

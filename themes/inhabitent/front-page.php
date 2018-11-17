@@ -91,7 +91,7 @@ get_header(); ?>
               <?php 
               // the post thumbnail
               if(has_post_thumbnail()){
-                the_post_thumbnail('medium'); 
+                the_post_thumbnail('large'); 
               }
               ?>
               <div class="journal-entry-info">
@@ -131,7 +131,7 @@ get_header(); ?>
               <?php 
               // the post thumbnail
               if(has_post_thumbnail()){
-                the_post_thumbnail('medium'); 
+                the_post_thumbnail('large'); 
               }
               ?>
               <div class="adventure-entry-info">
@@ -146,6 +146,7 @@ get_header(); ?>
               </div><!-- .adventure-entry-info -->
             </article><!-- .adventure-entry -->
           <?php endforeach; wp_reset_postdata(); ?>
+          <a href="<?php echo get_page_link('adventure'); ?>"><button>More Adventures</button></a>
         </div><!-- .frontpage-adventure-wrapper -->
       </section><!-- .frontpage-adventure -->
 

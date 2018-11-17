@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+# Journal
+--------------------------------------------------------------*/
+
+/* Journal - index.php */
+
+
+
+/* single-post - single.php */
+.single-post .comments-link {
+
+  a {
+    color: $color__background-body;
+
+    &:hover {
+      color: $color__brand-yellow;
+    }
+  }
+}
+
+.entry-footer {
+  ul {
+    margin: $base__space-unit 0 $base__space-unit*3;
+    display: flex;
+
+    li {
+      padding-right: 3px;
+    }
+  }
+}
