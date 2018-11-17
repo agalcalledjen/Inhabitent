@@ -51,7 +51,7 @@ get_header(); ?>
 
     <?php endif; ?> 
     <!-- end of default loop -->
-<div class="entry-content">
+  <div class="entry-content">
     <section class="frontpage-shop">
       <h2>Shop Stuff</h2>
       <div class="frontpage-shop-wrapper">
@@ -70,10 +70,10 @@ get_header(); ?>
             <p><?php echo $term->description; ?></p>
             <a href="<?php echo get_term_link($term); ?>"><button><?php echo $term->name; ?> Stuff</button></a>
             
-          </div>
+          </div><!-- .frontpage-term -->
         <?php endforeach; ?>
-      </div>
-    </section>
+      </div><!-- .frontpage-shop-wrapper -->
+    </section><!-- .frontpage-shop -->
 
     <!-- TOGO get_posts of Journal posts e.g. the default post type -->
     <?php 
@@ -110,12 +110,49 @@ get_header(); ?>
                 
                 <!-- the permalink -->
                 <a href="<?php echo get_permalink(); ?>" class="button">Read Entry</a>
-              </div>
-            </article>
+              </div><!-- .journal-entry-info -->
+            </article><!-- .journal-entry -->
           <?php endforeach; wp_reset_postdata(); ?>
-        </div>
-      </section>
-            </div>
+        </div><!-- .frontpage-journal-wrapper -->
+      </section><!-- .frontpage-journal -->
+
+      <?php 
+    /** 
+     * Get the Adventure entries
+     */ 
+      $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => 4);
+      
+      $adventure_posts = get_posts( $args ); ?>
+      <section class="frontpage-adventure">
+        <h2>Latest Adventures</h2>
+          <div class="frontpage-adventure-wrapper">
+          <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+            <article class="adventure-entry">
+              <?php 
+              // the post thumbnail
+              if(has_post_thumbnail()){
+                the_post_thumbnail('medium'); 
+              }
+              ?>
+              <div class="adventure-entry-info">
+                
+                <!-- post title -->
+                <a href="<?php echo get_permalink(); ?>">
+                  <h4><?php the_title(); ?></h4>
+                </a>
+                
+                <!-- the permalink -->
+                <a href="<?php echo get_permalink(); ?>" class="button">Read Entry</a>
+              </div><!-- .adventure-entry-info -->
+            </article><!-- .adventure-entry -->
+          <?php endforeach; wp_reset_postdata(); ?>
+        </div><!-- .frontpage-adventure-wrapper -->
+      </section><!-- .frontpage-adventure -->
+
+
+
+    </div><!-- .entry-content -->
+
       </article><!-- #post-## -->
 		</main><!-- #main -->
 	</div><!-- #primary -->

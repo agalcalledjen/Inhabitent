@@ -1053,7 +1053,8 @@ object {
       width: 30%; }
 
 .frontpage-shop,
-.frontpage-journal {
+.frontpage-journal,
+.frontpage-adventure {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1066,8 +1067,13 @@ object {
           justify-content: center; }
   .frontpage-shop .frontpage-shop-wrapper,
   .frontpage-shop .frontpage-journal-wrapper,
+  .frontpage-shop .frontpage-adventure-wrapper,
   .frontpage-journal .frontpage-shop-wrapper,
-  .frontpage-journal .frontpage-journal-wrapper {
+  .frontpage-journal .frontpage-journal-wrapper,
+  .frontpage-journal .frontpage-adventure-wrapper,
+  .frontpage-adventure .frontpage-shop-wrapper,
+  .frontpage-adventure .frontpage-journal-wrapper,
+  .frontpage-adventure .frontpage-adventure-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1078,10 +1084,20 @@ object {
     .frontpage-shop .frontpage-shop-wrapper .journal-entry,
     .frontpage-shop .frontpage-journal-wrapper .frontpage-term,
     .frontpage-shop .frontpage-journal-wrapper .journal-entry,
+    .frontpage-shop .frontpage-adventure-wrapper .frontpage-term,
+    .frontpage-shop .frontpage-adventure-wrapper .journal-entry,
     .frontpage-journal .frontpage-shop-wrapper .frontpage-term,
     .frontpage-journal .frontpage-shop-wrapper .journal-entry,
     .frontpage-journal .frontpage-journal-wrapper .frontpage-term,
-    .frontpage-journal .frontpage-journal-wrapper .journal-entry {
+    .frontpage-journal .frontpage-journal-wrapper .journal-entry,
+    .frontpage-journal .frontpage-adventure-wrapper .frontpage-term,
+    .frontpage-journal .frontpage-adventure-wrapper .journal-entry,
+    .frontpage-adventure .frontpage-shop-wrapper .frontpage-term,
+    .frontpage-adventure .frontpage-shop-wrapper .journal-entry,
+    .frontpage-adventure .frontpage-journal-wrapper .frontpage-term,
+    .frontpage-adventure .frontpage-journal-wrapper .journal-entry,
+    .frontpage-adventure .frontpage-adventure-wrapper .frontpage-term,
+    .frontpage-adventure .frontpage-adventure-wrapper .journal-entry {
       border-right: 1px solid #e1e1e1;
       border-bottom: 1px solid #e1e1e1;
       border-left: 1px solid #e1e1e1;
@@ -1128,6 +1144,49 @@ object {
   margin: 0 auto;
   padding-top: 1.5rem;
   padding-bottom: 3rem; }
+
+.frontpage-adventure-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .frontpage-adventure-wrapper .adventure-entry {
+    position: relative; }
+    .frontpage-adventure-wrapper .adventure-entry img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center; }
+    .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info {
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      padding: 0.75rem 1.5rem; }
+      .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info h4 {
+        font-family: "Merriweather", serif;
+        font-weight: 100;
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: #fff; }
+  .frontpage-adventure-wrapper .adventure-entry:first-child {
+    width: 49%; }
+    .frontpage-adventure-wrapper .adventure-entry:first-child img {
+      height: 548.8px; }
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(2) {
+    width: 49%; }
+    .frontpage-adventure-wrapper .adventure-entry:nth-child(2) img {
+      height: 272px; }
+  .frontpage-adventure-wrapper .adventure-entry:nth-child(3),
+  .frontpage-adventure-wrapper .adventure-entry:last-child {
+    width: 24.5%; }
+    .frontpage-adventure-wrapper .adventure-entry:nth-child(3) img,
+    .frontpage-adventure-wrapper .adventure-entry:last-child img {
+      height: 272px; }
 
 /* Single Product - single-product.php */
 .single-product .content-area {
@@ -1195,6 +1254,10 @@ object {
       font-weight: 100;
       font-size: 1rem;
       text-transform: capitalize; }
+      .post-type-archive-product .content-area .page-header .taxonomy-description p,
+      .tax-product_type .content-area .page-header .taxonomy-description p {
+        margin-top: 0;
+        margin-bottom: 3rem; }
     .post-type-archive-product .content-area .page-header .archive-product-shop-wrapper,
     .tax-product_type .content-area .page-header .archive-product-shop-wrapper {
       width: 30%;
@@ -1239,18 +1302,22 @@ object {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
       padding: 0 1rem; }
       .archive-product-wrapper .product-entry .archive-product-info .entry-title,
       .archive-product-wrapper .product-entry .archive-product-info .price {
         margin: 0.25rem 0 0.75rem; }
       .archive-product-wrapper .product-entry .archive-product-info .entry-title {
         color: #2f1339; }
-        .archive-product-wrapper .product-entry .archive-product-info .entry-title .ellipsis:after {
-          content: '...........................';
-          -webkit-box-flex: 1;
-              -ms-flex: 1;
-                  flex: 1;
-          overflow: hidden; }
+      .archive-product-wrapper .product-entry .archive-product-info .ellipsis {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        overflow: hidden; }
+        .archive-product-wrapper .product-entry .archive-product-info .ellipsis:after {
+          content: '...........................'; }
       .archive-product-wrapper .product-entry .archive-product-info .price {
         font-size: 0.9rem; }
 
@@ -1420,3 +1487,5 @@ body.admin-bar .site-header {
 .home,
 .page-template-about {
   padding-top: 0; }
+
+/* Navigation */

@@ -252,13 +252,15 @@
 }
 
 .frontpage-shop,
-.frontpage-journal {
+.frontpage-journal,
+.frontpage-adventure {
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   .frontpage-shop-wrapper,
-  .frontpage-journal-wrapper {
+  .frontpage-journal-wrapper,
+  .frontpage-adventure-wrapper {
     display: flex;
     justify-content: space-between;
 
@@ -316,6 +318,63 @@
   margin: 0 auto;
   padding-top: $base__space-unit;
   padding-bottom: $base__space-unit * 2;
+}
+
+.frontpage-adventure-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .adventure-entry {
+    position: relative;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .adventure-entry-info {
+      position: absolute;
+      left: 0;
+      top: $base__space-unit / 2;
+      padding: $base__space-unit/2 $base__space-unit;
+
+      h4 {
+        font-family: $font__main;
+        font-weight: 100;
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: $color__background-body;
+      }
+
+    }
+  }
+
+  .adventure-entry:first-child {
+    width: 49%;
+
+    img {
+      height: 548.8px;
+    }
+
+  }
+
+  .adventure-entry:nth-child(2) {
+    width: 49%;
+
+    img {
+      height: 272px;
+    }
+  }
+
+  .adventure-entry:nth-child(3),
+  .adventure-entry:last-child {
+    width: 24.5%;
+
+    img {
+      height: 272px;
+    }
+  }
 }
 
 
@@ -382,8 +441,6 @@
       font-size: $font__size * 2.5;
       color: $color__text-main;
       margin-bottom: $base__space-unit;
-
-
     }
 
     .taxonomy-description {
@@ -391,6 +448,11 @@
       font-weight: 100;
       font-size: $font__size;
       text-transform: capitalize;
+
+      p {
+        margin-top: 0;
+        margin-bottom: $base__space-unit * 2;
+      }
     }
 
     .archive-product-shop-wrapper {
@@ -431,6 +493,7 @@
     .archive-product-info {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       padding: 0 1rem;
 
       .entry-title,
@@ -440,18 +503,17 @@
 
       .entry-title {
         color: $color__brand-purple;
-
-        .ellipsis {
-
-          &:after {
-            content: '...........................';
-            flex: 1;
-            overflow: hidden;
-          }
-        }
       }
 
+      .ellipsis {
+        flex: 1;
+        overflow: hidden;
 
+        &:after {
+          content: '...........................';
+
+        }
+      }
 
       .price {
         font-size: $font__size * 0.9;
