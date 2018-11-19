@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+# Page Template - Adventures
+--------------------------------------------------------------*/
+
+/* Single Adventure - single-adventure.php */
+.single-adventure .site-content {
+  width: 100%;
+
+  h2 {
+    font-size: $font__size * 2.5;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: normal;
+  }
+
+  .entry-content {
+    padding-bottom: 0;
+
+    .entry-meta {
+      h3 {
+        font-weight: 100;
+        font-size: $font__size * 1.25;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  .entry-footer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+
+// @include flex-wrapper;
+
+.post-type-archive-adventure .content-area {
+  width: 100%;
+  padding: 0 0 $base__space-unit * 2;
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: $border__dashed;
+    margin-bottom: $base__space-unit;
+
+    .page-title {
+      font-size: $font__size * 2.5;
+      color: $color__text-main;
+      margin-bottom: $base__space-unit;
+    }
+  }
+}
+
+.archive-adventure-wrapper {
+  @include flex-wrapper;
+  margin-bottom: $base__space-unit * 3;
+
+  .adventure-entry {
+    position: relative;
+    width: 48.8%;
+    height: 548px;
+    margin-top: $base__space-unit;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(70%);
+    }
+
+    .adventure-entry-info {
+      position: absolute;
+      left: 0;
+      top: $base__space-unit / 2;
+      padding: $base__space-unit/2 $base__space-unit;
+      margin-top: $base__space-unit;
+
+      h4 {
+        margin-top: $base__space-unit;
+        margin-bottom: $base__space-unit * 3;
+        font-family: $font__main;
+        font-weight: 100;
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: $color__background-body;
+
+        &:hover {
+          color: $color__brand-yellow;
+        }
+      }
+
+      .button {
+        border-color: $color__background-body;
+        color: $color__background-body;
+
+        &:hover {
+          border-color: $color__brand-green;
+        }
+      }
+    }
+  }
+}

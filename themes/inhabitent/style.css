@@ -945,7 +945,8 @@ object {
 .entry-content .button,
 .entry-footer .button,
 .home .button,
-.search-results .button {
+.search-results .button,
+.post-type-archive-adventure .button {
   border: 1px solid #000;
   border-radius: 0;
   background: transparent;
@@ -953,11 +954,12 @@ object {
   font-size: 0.9rem;
   font-family: "Novecento", sans-serif;
   text-transform: uppercase;
-  padding: 0.75rem 1.5rem; }
+  padding: inherit; }
   .entry-content .button:hover,
   .entry-footer .button:hover,
   .home .button:hover,
-  .search-results .button:hover {
+  .search-results .button:hover,
+  .post-type-archive-adventure .button:hover {
     border: 1px solid #248A83;
     background: #248A83;
     color: #fff; }
@@ -975,22 +977,32 @@ object {
     border: none; }
 
 /* About - about.php */
+/* Single Adventure - single-adventure.php */
 .page-template-about .site-content,
-.home .site-content {
+.home .site-content,
+.single-adventure .site-content {
   width: 100%; }
+  .page-template-about .site-content .content-area,
+  .home .site-content .content-area,
+  .single-adventure .site-content .content-area {
+    width: 100%; }
   .page-template-about .site-content h1,
-  .home .site-content h1 {
+  .home .site-content h1,
+  .single-adventure .site-content h1 {
     font-size: 3rem; }
   .page-template-about .site-content h2,
-  .home .site-content h2 {
+  .home .site-content h2,
+  .single-adventure .site-content h2 {
     text-align: center; }
 
 .page-template-about article,
-.home article {
+.home article,
+.single-adventure article {
   margin-top: 0; }
 
-.page-template-about .site-content .entry-content {
-  width: 61%;
+.page-template-about .site-content .entry-content,
+.single-adventure .site-content .entry-content {
+  max-width: 800px;
   margin: 0 auto;
   padding-top: 1.5rem;
   padding-bottom: 3rem; }
@@ -1159,7 +1171,8 @@ body.admin-bar .site-header {
   padding-top: 52.5px; }
 
 .home,
-.page-template-about {
+.page-template-about,
+.single-adventure {
   padding-top: 0; }
 
 /* Navigation */
@@ -1300,26 +1313,31 @@ body.admin-bar .site-header {
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 274px 274px 46px; }
+  grid-template-rows: 262px 262px 46px; }
   .frontpage-adventure-wrapper .adventure-entry {
     position: relative; }
     .frontpage-adventure-wrapper .adventure-entry img {
+      height: 100%;
       -o-object-fit: cover;
          object-fit: cover;
       -o-object-position: center;
          object-position: center;
-      height: 100%; }
+      -webkit-filter: brightness(70%);
+              filter: brightness(70%); }
     .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info {
       position: absolute;
       left: 0;
       top: 0.75rem;
       padding: 0.75rem 1.5rem; }
       .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info h4 {
+        margin-top: 1.5rem;
         font-family: "Merriweather", serif;
         font-weight: 100;
         font-size: 3rem;
         text-transform: capitalize;
         color: #fff; }
+        .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info h4:hover {
+          color: #f0e4d1; }
       .frontpage-adventure-wrapper .adventure-entry .adventure-entry-info .button {
         border-color: #fff;
         color: #fff; }
@@ -1503,3 +1521,90 @@ body.admin-bar .site-header {
           content: '...........................'; }
       .archive-product-wrapper .product-entry .archive-product-info .price {
         font-size: 0.9rem; }
+
+/*--------------------------------------------------------------
+# Page Template - Adventures
+--------------------------------------------------------------*/
+/* Single Adventure - single-adventure.php */
+.single-adventure .site-content {
+  width: 100%; }
+  .single-adventure .site-content h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: normal; }
+  .single-adventure .site-content .entry-content {
+    padding-bottom: 0; }
+    .single-adventure .site-content .entry-content .entry-meta h3 {
+      font-weight: 100;
+      font-size: 1.25rem;
+      margin-top: 0.5rem; }
+  .single-adventure .site-content .entry-footer {
+    max-width: 800px;
+    margin: 0 auto; }
+
+.post-type-archive-adventure .content-area {
+  width: 100%;
+  padding: 0 0 3rem; }
+  .post-type-archive-adventure .content-area .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 1.5rem; }
+    .post-type-archive-adventure .content-area .page-header .page-title {
+      font-size: 2.5rem;
+      color: #404040;
+      margin-bottom: 1.5rem; }
+
+.archive-adventure-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4.5rem; }
+  .archive-adventure-wrapper .adventure-entry {
+    position: relative;
+    width: 48.8%;
+    height: 548px;
+    margin-top: 1.5rem; }
+    .archive-adventure-wrapper .adventure-entry img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+      -webkit-filter: brightness(70%);
+              filter: brightness(70%); }
+    .archive-adventure-wrapper .adventure-entry .adventure-entry-info {
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1.5rem; }
+      .archive-adventure-wrapper .adventure-entry .adventure-entry-info h4 {
+        margin-top: 1.5rem;
+        margin-bottom: 4.5rem;
+        font-family: "Merriweather", serif;
+        font-weight: 100;
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: #fff; }
+        .archive-adventure-wrapper .adventure-entry .adventure-entry-info h4:hover {
+          color: #f0e4d1; }
+      .archive-adventure-wrapper .adventure-entry .adventure-entry-info .button {
+        border-color: #fff;
+        color: #fff; }
+        .archive-adventure-wrapper .adventure-entry .adventure-entry-info .button:hover {
+          border-color: #248A83; }

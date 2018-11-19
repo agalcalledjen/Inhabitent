@@ -90,7 +90,8 @@
 .entry-content,
 .entry-footer,
 .home,
-.search-results {
+.search-results,
+.post-type-archive-adventure {
   .button {
     border: 1px solid #000;
     border-radius: 0;
@@ -99,7 +100,7 @@
     font-size: $font__size * 0.9;
     font-family: $font__accent;
     text-transform: uppercase;
-    padding: 0.75rem 1.5rem;
+    padding: inherit;
 
     &:hover {
       border: 1px solid $color__brand-green;
@@ -136,9 +137,15 @@
 }
 
 /* About - about.php */
+/* Single Adventure - single-adventure.php */
 .page-template-about .site-content,
-.home .site-content {
+.home .site-content,
+.single-adventure .site-content {
   width: 100%;
+
+  .content-area {
+    width: 100%;
+  }
 
   h1 {
     font-size: $font__size * 3;
@@ -150,13 +157,16 @@
 }
 
 .page-template-about article,
-.home article {
+.home article,
+.single-adventure article {
   margin-top: 0;
 }
 
-.page-template-about .site-content {
+.page-template-about .site-content,
+.single-adventure .site-content {
+
   .entry-content {
-    width: 61%;
+    max-width: 800px;
     margin: 0 auto;
     padding-top: $base__space-unit;
     padding-bottom: $base__space-unit * 2;

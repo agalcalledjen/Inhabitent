@@ -142,11 +142,11 @@ get_header(); ?>
                 </a>
                 
                 <!-- the permalink -->
-                <a href="<?php echo get_permalink(); ?>" class="button">Read Entry</a>
+                <a href="<?php echo get_permalink(); ?>" class="button">Read More</a>
               </div><!-- .adventure-entry-info -->
             </article><!-- .adventure-entry -->
           <?php endforeach; wp_reset_postdata(); ?>
-          <a href="<?php echo get_page_link('adventure'); ?>"><button>More Adventures</button></a>
+          <a href="<?php echo get_post_type_archive_link('adventure'); ?>"><button>More Adventures</button></a>
         </div><!-- .frontpage-adventure-wrapper -->
       </section><!-- .frontpage-adventure -->
 
