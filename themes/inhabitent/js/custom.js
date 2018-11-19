@@ -6,14 +6,41 @@
     $('.icon-search').on('click', function (event) {
       event.preventDefault();
 
-      $('.search-field').toggle(2000);
-      $('.search-field').focus();
+      // $('.search-field').addClass('visible');
+      $('.site-header .search-field').toggle(1000);
+      $('.site header .search-field').focus();
+
+
       // $('.search-field').blur();
       // to make the input field clear
       // $('.search-field').focus(function () {
       //   this.value = "";
       // }); 
     });
+
+    $('.icon-search').on('click', function (event) {
+      event.preventDefault();
+
+
+      $('.site-header .search-field').blur();
+      // $('.site-header .search-field').toggle(1000);
+    });
+
+
+    // $('.search-field').on('blur', function (event) {
+    //   $('search-field').removeClass('visible');
+    // });
+
+    // $('icon-search').click(function () {
+    //   $('.search-field').removeClass('visible');
+    // });
+
+    // $(document).click(function (event) {
+    //   //if you click on anything except the modal itself or the "open modal" link, close the modal
+    //   if (!$(event.target).closest('.search-field,.icon-search').length) {
+    //     $('body').find('.search-field').removeClass('visible');
+    //   }
+    // });
   });
 
   // TODO: add search form toggle script

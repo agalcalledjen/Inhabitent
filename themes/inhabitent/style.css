@@ -443,7 +443,6 @@ input[type="submit"] {
   font-size: 0.9rem;
   font-family: "Novecento", sans-serif;
   color: #fff;
-  text-transform: uppercase;
   padding: .6rem 1rem .4rem; }
   button:hover,
   input[type="button"]:hover,
@@ -494,7 +493,7 @@ textarea {
   color: #d99054; }
 
 /* Search Form */
-.search-form .search-field {
+.site-header .search-form .search-field {
   margin-top: 0;
   padding: 0;
   border: none;
@@ -504,12 +503,16 @@ textarea {
   width: 175px;
   font-family: "Novecento", sans-serif;
   display: none;
-  text-decoration: none; }
-  .search-form .search-field:focus {
+  text-decoration: none;
+  text-transform: uppercase; }
+  .site-header .search-form .search-field:focus {
     border: none;
     cursor: text;
     outline: 0;
     width: 175px; }
+
+.visible {
+  display: inline-block; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -895,7 +898,8 @@ object {
 .single-post .content-area,
 .page-template-find-us .content-area,
 .search-results .content-area,
-.archive.date .content-area {
+.archive.date .content-area,
+.error404 .content-area {
   width: 73%;
   padding: 5px 55px 6rem 0;
   border-right: 1px solid #e1e1e1; }
@@ -903,7 +907,8 @@ object {
 .blog .widget-area,
 .single-post .widget-area,
 .search-results .widget-area,
-.archive.date .widget-area {
+.archive.date .widget-area,
+.error404 .widget-area {
   width: 27%;
   -ms-flex-item-align: start;
       align-self: flex-start; }
@@ -954,7 +959,7 @@ object {
   font-size: 0.9rem;
   font-family: "Novecento", sans-serif;
   text-transform: uppercase;
-  padding: inherit; }
+  padding: 12px 24px; }
   .entry-content .button:hover,
   .entry-footer .button:hover,
   .home .button:hover,
@@ -1006,6 +1011,36 @@ object {
   margin: 0 auto;
   padding-top: 1.5rem;
   padding-bottom: 3rem; }
+
+/* error404 - 404.php */
+.error404 .page-header {
+  margin-top: 2.25rem; }
+
+.error404 .page-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2.25rem; }
+
+.error404 .page-content .search-form fieldset {
+  width: 150px;
+  padding: 0;
+  border: none;
+  margin: 0;
+  margin-left: 1px; }
+  .error404 .page-content .search-form fieldset .icon-search,
+  .error404 .page-content .search-form fieldset .search-submit {
+    display: none; }
+  .error404 .page-content .search-form fieldset input[type="search"] {
+    padding: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Merriweather", serif;
+    width: auto;
+    margin-top: 0;
+    padding: 5px 10px; }
+
+.error404 .page-content .widget_archive p {
+  margin-bottom: 0.5rem; }
 
 /*--------------------------------------------------------------
 # Footer
@@ -1094,7 +1129,8 @@ object {
 .single .site-header,
 .page-template-find-us .site-header,
 .archive .site-header,
-.search-results .site-header {
+.search-results .site-header,
+.error404 .site-header {
   border-bottom: 1px solid #e1e1e1;
   background: rgba(255, 255, 255, 0.8); }
 
@@ -1165,7 +1201,8 @@ body.admin-bar .site-header {
 .single,
 .page-template-find-us,
 .archive,
-.search-results {
+.search-results,
+.error404 {
   /* This Should Be Equal to the Height of your
   * fixed header bar. */
   padding-top: 52.5px; }

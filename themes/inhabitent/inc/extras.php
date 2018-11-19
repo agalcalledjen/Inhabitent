@@ -138,7 +138,7 @@ add_action('pre_get_posts','inhabitent_mod_post_type_archive');
  /** 
  * Filter the Product archive title 
  * */ 
-function inhabitent_archive_title ( $title ){
+function inhabitent_archive_product_title ( $title ){
   // we don't want this to be applied to every archive on our page so we will use an else if stmt
   if( is_post_type_archive('product') ){
     $title = 'Shop Stuff';
@@ -149,7 +149,7 @@ function inhabitent_archive_title ( $title ){
   }
   return $title;
 }
-add_filter('get_the_archive_title', 'inhabitent_archive_title'); 
+add_filter('get_the_archive_title', 'inhabitent_archive_product_title'); 
 
  /** 
  * Replace the excerpt "Read More" 
@@ -159,3 +159,16 @@ add_filter('get_the_archive_title', 'inhabitent_archive_title');
 //   return '<a class="read-more" href="' . get_permalink( $post->ID ) . '">Read More</a>' ;
 // }
 // add_filter('excerpt_more','inhabitent_except_more');
+
+function inhabitent_archive_adventure_title ( $title ){
+  // we don't want this to be applied to every archive on our page so we will use an else if stmt
+  if( is_post_type_archive('adventure') ){
+    $title = 'Latest Adventures';
+  } else if( is_tax('adventure_type') ){
+    // 
+    // %1$1 = token
+    $title = sprintf( '%1$1', single_term_title( '', false));
+  }
+  return $title;
+}
+add_filter('get_the_archive_title', 'inhabitent_archive_adventure_title'); 

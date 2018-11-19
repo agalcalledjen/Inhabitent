@@ -35,7 +35,8 @@
 .single-post .content-area,
 .page-template-find-us .content-area,
 .search-results .content-area,
-.archive.date .content-area {
+.archive.date .content-area,
+.error404 .content-area {
   // grid-area: main;
   width: 73%;
   padding: 5px 55px $base__space-unit*4 0;
@@ -45,7 +46,8 @@
 .blog .widget-area,
 .single-post .widget-area,
 .search-results .widget-area,
-.archive.date .widget-area {
+.archive.date .widget-area,
+.error404 .widget-area {
   // grid-area: sidebar;
   width: 27%;
   align-self: flex-start;
@@ -100,7 +102,7 @@
     font-size: $font__size * 0.9;
     font-family: $font__accent;
     text-transform: uppercase;
-    padding: inherit;
+    padding: 12px 24px;
 
     &:hover {
       border: 1px solid $color__brand-green;
@@ -170,5 +172,50 @@
     margin: 0 auto;
     padding-top: $base__space-unit;
     padding-bottom: $base__space-unit * 2;
+  }
+}
+
+/* error404 - 404.php */
+.error404 {
+  .page-header {
+    margin-top: $base__space-unit * 1.5;
+  }
+
+  .page-content {
+    h2 {
+      font-size: $font__size * 1.5;
+      margin-top: $base__space-unit * 1.5;
+    }
+
+    .search-form {
+
+      fieldset {
+        width: 150px;
+        padding: 0;
+        border: none;
+        margin: 0;
+        margin-left: 1px;
+
+        .icon-search,
+        .search-submit {
+          display: none;
+        }
+
+        input[type="search"] {
+          padding: inherit;
+          display: flex;
+          font-family: $font__main;
+          width: auto;
+          margin-top: 0;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .widget_archive {
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }
