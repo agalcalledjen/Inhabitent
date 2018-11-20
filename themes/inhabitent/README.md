@@ -15,8 +15,7 @@ This is a project produced from the following lessons from Week 5 & 6:
 
 ---
 
-![Image of Inhabitent Theme]
-(https://nejmal.github.com/project-04/themes/inhabitent/screenshot.png)
+![Image of Inhabitent Theme](https://github.com/nejmal/project-04/blob/master/themes/inhabitent/screenshot.png)
            
 ---
 
