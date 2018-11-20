@@ -443,6 +443,7 @@ input[type="submit"] {
   font-size: 0.9rem;
   font-family: "Novecento", sans-serif;
   color: #fff;
+  text-transform: uppercase;
   padding: .6rem 1rem .4rem; }
   button:hover,
   input[type="button"]:hover,
@@ -474,7 +475,7 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #666; }
 
 input[type="text"],
 input[type="email"],
@@ -1131,12 +1132,6 @@ object {
   border-bottom: 1px solid #e1e1e1;
   background: rgba(255, 255, 255, 0.8); }
 
-.page-template-about .site-header,
-.home .site-header,
-.single-adventure .site-header {
-  border: 0;
-  background: transparent; }
-
 /* This will ensure your site looks correct
  * when the admin bar is displaying.
 --------------------------------------------- */
@@ -1161,18 +1156,11 @@ body.admin-bar .site-header {
       background-size: 50px;
       width: 50px; }
 
-.blog .header-logo,
-.single .header-logo,
-.page-template-find-us .header-logo,
-.archive .header-logo,
-.search-results .header-logo,
-.error404 .header-logo {
-  background-image: url("../../public/assets/images/logos/inhabitent-logo-tent.svg"); }
+.header-logo {
+  background: url("../../public/assets/images/logos/inhabitent-logo-tent.svg"); }
 
-.page-template-about .header-logo,
-.home .header-logo,
-.single-adventure .header-logo {
-  background-image: url("../../public/assets/images/logos/inhabitent-logo-tent-white.svg"); }
+.alt-header-logo {
+  background: url("../../public/assets/images/logos/inhabitent-logo-tent-white.svg"); }
 
 .main-navigation {
   display: -webkit-box;
@@ -1202,7 +1190,7 @@ body.admin-bar .site-header {
 .home .main-navigation a,
 .single-adventure .main-navigation a {
   color: #fff;
-  text-shadow: 2px 2px 4px #000000; }
+  text-shadow: 2px 2px 4px #2f1339; }
   .page-template-about .main-navigation a:hover,
   .home .main-navigation a:hover,
   .single-adventure .main-navigation a:hover {
@@ -1212,7 +1200,7 @@ body.admin-bar .site-header {
 .home .main-navigation .search-form fieldset .icon-search,
 .single-adventure .main-navigation .search-form fieldset .icon-search {
   color: #fff;
-  text-shadow: 2px 2px 4px #000000; }
+  text-shadow: 2px 2px 4px #2f1339; }
   .page-template-about .main-navigation .search-form fieldset .icon-search:hover,
   .home .main-navigation .search-form fieldset .icon-search:hover,
   .single-adventure .main-navigation .search-form fieldset .icon-search:hover {

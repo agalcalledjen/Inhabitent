@@ -84,6 +84,7 @@ add_filter( 'stylesheet_uri', 'inhabitent_minified_css', 10, 2 );
  */
 function inhabitent_scripts() {
   wp_enqueue_style( 'inhabitent-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'inhabitent-style-img', get_stylesheet_uri() );
   
   // to link font awesome
   wp_enqueue_style('inhabitent-fontawesome','https://use.fontawesome.com/releases/v5.5.0/css/all.css');

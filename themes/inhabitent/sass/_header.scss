@@ -24,12 +24,12 @@
   background: rgba(255, 255, 255, 0.8);
 }
 
-.page-template-about .site-header,
-.home .site-header,
-.single-adventure .site-header {
-  border: 0;
-  background: transparent;
-}
+// .page-template-about .site-header,
+// .home .site-header,
+// .single-adventure .site-header {
+//   border: 0;
+//   background: transparent;
+// }
 
 /* This will ensure your site looks correct
  * when the admin bar is displaying.
@@ -67,27 +67,30 @@ body.admin-bar .site-header {
   }
 }
 
-.blog .header-logo,
-.single .header-logo,
-.page-template-find-us .header-logo,
-.archive .header-logo,
-.search-results .header-logo,
-.error404 .header-logo {
-  background-image: url("../../public/assets/images/logos/inhabitent-logo-tent.svg");
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: 50px;
-  // width: 50px;
+
+// .blog .header-logo,
+// .single .header-logo,
+// .page-template-find-us .header-logo,
+// .archive .header-logo,
+// .search-results .header-logo,
+// .error404 .header-logo 
+.header-logo {
+  background: url("../../public/assets/images/logos/inhabitent-logo-tent.svg");
 }
 
-.page-template-about .header-logo,
-.home .header-logo,
-.single-adventure .header-logo {
-  background-image: url("../../public/assets/images/logos/inhabitent-logo-tent-white.svg");
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // background-size: 50px;
-  // width: 50px;
+// .page-template-about .header-logo,
+// .home .header-logo,
+// .single-adventure .header-logo {
+//   background: url("../../public/assets/images/logos/inhabitent-logo-tent-white.svg");
+// }
+
+// .main-header-logo {
+//   background-image: url("../../public/assets/images/logos/inhabitent-logo-tent.svg");
+//   border-bottom: 1px solid red;
+// }
+
+.alt-header-logo {
+  background: url("../../public/assets/images/logos/inhabitent-logo-tent-white.svg");
 }
 
 .main-navigation {
@@ -130,7 +133,7 @@ body.admin-bar .site-header {
 
   a {
     color: $color__background-body;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px $color__brand-purple;
 
     &:hover {
       color: $color__brand-yellow;
@@ -141,7 +144,7 @@ body.admin-bar .site-header {
     fieldset {
       .icon-search {
         color: $color__background-body;
-        text-shadow: 2px 2px 4px #000000;
+        text-shadow: 2px 2px 4px $color__brand-purple;
 
         &:hover {
           color: $color__brand-yellow;

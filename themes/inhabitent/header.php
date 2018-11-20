@@ -24,9 +24,10 @@
         <div class="header container">
           <div class="site-branding">
             <h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-            <a href="<?php bloginfo( 'url' ); ?>" class="main-header-logo">
+            <a href="<?php bloginfo( 'url' ); ?>">
               <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/assets/images/logos/inhabitent-logo-tent.svg" alt="Inhabitent Logo Tent" class="header-logo"/> -->
-              <div class="header-logo"></div>
+              <!-- <img src="" class="header-logo"> -->
+              <div class="header-logo alt-header-logo"></div>
             </a>
             <!-- <a href="<?php bloginfo( 'url' ); ?>" class="alt-header-logo">
               <img src="<?php echo get_template_directory_uri(); ?>/public/assets/images/logos/inhabitent-logo-tent-white.svg" alt="Inhabitent Logo Tent White" class="header-logo-white"/>
