@@ -88,12 +88,14 @@ get_header(); ?>
           <div class="frontpage-journal-wrapper">
           <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
             <article class="journal-entry">
+              
               <?php 
               // the post thumbnail
               if(has_post_thumbnail()){
                 the_post_thumbnail('large'); 
               }
               ?>
+             
               <div class="journal-entry-info">
                 <span class="entry-meta">
                 <?php

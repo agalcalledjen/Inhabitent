@@ -25,7 +25,8 @@
 }
 
 .page-template-about .site-header,
-.home .site-header {
+.home .site-header,
+.single-adventure .site-header {
   border: 0;
   background: transparent;
 }
@@ -50,13 +51,43 @@ body.admin-bar .site-header {
       height: 100%;
       display: flex;
 
-      img {
-        height: 35px;
-        align-self: center;
-        width: 30%;
+      .header-logo {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50px;
+        width: 50px;
       }
+
+      // img {
+      //   height: 35px;
+      //   align-self: center;
+      //   width: 30%;
+      // }
     }
   }
+}
+
+.blog .header-logo,
+.single .header-logo,
+.page-template-find-us .header-logo,
+.archive .header-logo,
+.search-results .header-logo,
+.error404 .header-logo {
+  background-image: url("../../public/assets/images/logos/inhabitent-logo-tent.svg");
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: 50px;
+  // width: 50px;
+}
+
+.page-template-about .header-logo,
+.home .header-logo,
+.single-adventure .header-logo {
+  background-image: url("../../public/assets/images/logos/inhabitent-logo-tent-white.svg");
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: 50px;
+  // width: 50px;
 }
 
 .main-navigation {
@@ -71,7 +102,15 @@ body.admin-bar .site-header {
 
       .icon-search {
         color: $color__brand-green;
-        margin-left: $base__space-unit / 2;
+
+        &:hover {
+          color: $color__text-main;
+        }
+
+        i {
+          padding-right: 0;
+
+        }
       }
 
       .search-submit {
@@ -84,6 +123,35 @@ body.admin-bar .site-header {
     }
   }
 }
+
+.page-template-about .main-navigation,
+.home .main-navigation,
+.single-adventure .main-navigation {
+
+  a {
+    color: $color__background-body;
+    text-shadow: 2px 2px 4px #000000;
+
+    &:hover {
+      color: $color__brand-yellow;
+    }
+  }
+
+  .search-form {
+    fieldset {
+      .icon-search {
+        color: $color__background-body;
+        text-shadow: 2px 2px 4px #000000;
+
+        &:hover {
+          color: $color__brand-yellow;
+        }
+      }
+    }
+  }
+}
+
+
 
 // .home .search-submit,
 .blog .search-submit,

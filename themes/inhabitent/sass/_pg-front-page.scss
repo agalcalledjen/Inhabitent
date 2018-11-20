@@ -6,9 +6,7 @@
 
   .header-banner {
     // margin-top: 119px;
-    background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
-
-      url("../../public/assets/images/home-hero.jpg");
+    background-image: url("../../public/assets/images/logos/inhabitent-logo-full.svg"), linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url("../../public/assets/images/home-hero.jpg");
     background-repeat: no-repeat;
     background-position: center center, left, center top;
     background-size: 275px, cover, cover;
@@ -75,6 +73,12 @@
   }
 }
 
+.frontpage-term {
+  button {
+    text-transform: uppercase;
+  }
+}
+
 .frontpage-journal {
   margin-bottom: $base__space-unit * 3;
 
@@ -89,6 +93,8 @@
 
     img {
       border-bottom: 5px solid #e1e1e1;
+      object-fit: cover;
+      height: 250px;
     }
 
     .journal-entry-info {
