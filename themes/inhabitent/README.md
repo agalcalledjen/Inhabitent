@@ -15,6 +15,11 @@ This is a project produced from the following lessons from Week 5 & 6:
 
 ---
 
+![Image of Inhabitent Theme]
+(https://nejmal.github.com/project-04/themes/inhabitent/screenshot.png)
+           
+---
+
 ## Installation
 
 ### 1. Download me (don't clone me!)
