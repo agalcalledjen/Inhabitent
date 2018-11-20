@@ -54,6 +54,7 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
 - MAMP
 - WordPress
   - Plugins:
+    - Show Current Template
     - Akismet Anti-Spam
     - Contact Form 7
     - Custom Field Suite
