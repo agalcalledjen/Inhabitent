@@ -115,3 +115,12 @@ form {
   text-transform: uppercase;
   color: $color__brand-purple;
 }
+
+.copyright {
+  text-transform: uppercase;
+}
+
+.day-of-week {
+  font-family: $font__main;
+  text-transform: capitalize;
+}

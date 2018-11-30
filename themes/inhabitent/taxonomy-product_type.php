@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single products.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  * Template Name: Product Type Template
  */
 

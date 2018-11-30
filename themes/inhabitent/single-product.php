@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single products.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  * Template Name: Single Product Template
  */
 
@@ -12,13 +12,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-      
-    
-
-      <!-- this is retrieving the content-single.php and displaying it -->
-      <!-- ?php get_template_part( 'template-parts/content', 'single' ); ?> -->
-
-      <!-- copy and paste from content-single.php -->
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
           <?php if ( has_post_thumbnail() ) : ?>
@@ -28,7 +21,6 @@ get_header(); ?>
         
         <div class="entry-content">
         <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-          <!-- this looks to see if there is a price field and then shows it -->
           <p class="price"><?php echo '$' . CFS()->get( 'price' ); ?></p>
           <p><?php the_content(); ?></p>
           

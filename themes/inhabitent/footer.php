@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  */
 
 ?>
@@ -38,15 +38,6 @@
                     <i class="fab fa-google-plus-square fa-lg"></i>
                   </a>
                 </li>
-                <!-- <a href="https://facebook.com" target="_blank" class="icon-links">
-                  <i class="fab fa-facebook-square fa-lg"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" class="icon-links">
-                  <i class="fab fa-twitter-square fa-lg"></i>
-                </a>
-                <a href="https://plus.google.com/discover" target="_blank" class="icon-links">
-                  <i class="fab fa-google-plus-square fa-lg"></i>
-                </a> -->
               </ul><!-- end of .contacts-icons -->
             </div><!-- end of .contact-info -->
             <div class="business-hours">
@@ -57,13 +48,13 @@
             </div><!-- end of .business-hours -->
           </div><!-- end of .site-info -->
           <div class="footer-logo">
-            <a href="<?php bloginfo( 'url' ); ?>">
+            <a href="<?php echo esc_url( home_url() ); ?>">
               <img src="<?php echo get_template_directory_uri(); ?>/public/assets/images/logos/inhabitent-logo-text.svg" alt="Inhabitent Logo Text Dark"/>
             </a>  
           </div><!-- end of .footer-logo -->
         </div><!-- end of .footer -->
         <div class="copyright">
-          <p>COPYRIGHT &copy; 2019 INHABITENT</p>
+          <p>Copyright &copy; 2019 Inhabitent</p>
         </div><!-- end of .copyright -->     
 			</footer><!-- #colophon -->
 		</div><!-- #page -->

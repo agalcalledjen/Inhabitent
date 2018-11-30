@@ -1,6 +1,6 @@
 (function ($) {
 
-  $(document).ready(function () {
+  $(function () {
 
     const $searchField = $('.site-header .search-field');
 
@@ -68,15 +68,5 @@
         $altSearch.css('color', '#f0e4d1');
       }
     });
-
-
   });
-
-  // TODO: add search form toggle script
-  // focus and blur methods
-
 })(jQuery);
-
-// IIFE
-// immediately invoke function expression
-// keeps scoping withing function and able to use $ for jQuery

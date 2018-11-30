@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  */
 
 get_header(); ?>

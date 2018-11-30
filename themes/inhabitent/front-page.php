@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  */
 
 get_header(); ?>
@@ -34,9 +34,8 @@ get_header(); ?>
             <!-- <img src="<?php echo get_template_directory_uri(); ?>/public/assets/images/logos/inhabitent-logo-full.svg" alt="Inhabitent Logo Full" class="home-logo"/> -->
 
             <?php if ( 'post' === get_post_type() ) : ?>
-            <!-- <div class="entry-meta">
               <?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
-            </div>.entry-meta -->
+
             <?php endif; ?>
           </header><!-- .entry-header -->
        
@@ -56,7 +55,6 @@ get_header(); ?>
       <h2>Shop Stuff</h2>
       <div class="frontpage-shop-wrapper">
       <?php
-        // Get the terms for our products and do some clever stuff with images.
         $terms = get_terms(array(
           'taxonomy' => 'product_type',
           'hide_empty' => 0, // false, hide
@@ -64,8 +62,6 @@ get_header(); ?>
 
         foreach($terms as $term): ?>
           <div class="frontpage-term">
-            <!-- can use d bc of kint debug, similar to var_dump, saying to dump -->
-            <!-- <?php d($term); ?> -->
             <img src="<?php echo get_template_directory_uri() . '/public/assets/images/' . $term->slug . '.svg'; ?>" alt="<?php echo $term->name; ?>"/>
             <p><?php echo $term->description; ?></p>
             <a href="<?php echo get_term_link($term); ?>"><button><?php echo $term->name; ?> Stuff</button></a>
@@ -75,7 +71,6 @@ get_header(); ?>
       </div><!-- .frontpage-shop-wrapper -->
     </section><!-- .frontpage-shop -->
 
-    <!-- TOGO get_posts of Journal posts e.g. the default post type -->
     <?php 
     /** 
      * Get the blog Journal entries
@@ -151,8 +146,6 @@ get_header(); ?>
           <a href="<?php echo get_post_type_archive_link('adventure'); ?>"><button>More Adventures</button></a>
         </div><!-- .frontpage-adventure-wrapper -->
       </section><!-- .frontpage-adventure -->
-
-
 
     </div><!-- .entry-content -->
 

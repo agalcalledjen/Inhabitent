@@ -2,8 +2,8 @@
 Theme Name: Inhabitent
 Theme URI: http://underscores.me/
 Author: Jennifer Lam
-Author URI: http://www.redacademy.com
-Description: A WordPress starter theme for RED Academy students.
+Author URI: https://github.com/nejmal/project-04
+Description: A multi-page theme with a blog for a camping supply company, Inhabitent Camping Supply Co based off of the RED Starter Theme for students.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -348,6 +348,13 @@ form {
   font-family: "Novecento", sans-serif;
   text-transform: uppercase;
   color: #2f1339; }
+
+.copyright {
+  text-transform: uppercase; }
+
+.day-of-week {
+  font-family: "Merriweather", serif;
+  text-transform: capitalize; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -1058,7 +1065,7 @@ object {
     color: #fff; }
   .site-footer .copyright {
     text-align: center;
-    font-family: "Novecento"; }
+    font-family: "Novecento", sans-serif; }
 
 .footer {
   display: -webkit-box;
@@ -1234,7 +1241,6 @@ body.admin-bar .site-header {
 .single-adventure {
   padding-top: 0; }
 
-/* Navigation */
 /*--------------------------------------------------------------
 # Page Template - Front Page - front-page.php
 --------------------------------------------------------------*/

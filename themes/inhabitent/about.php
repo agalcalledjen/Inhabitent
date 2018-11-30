@@ -2,7 +2,7 @@
 /**
  * The template for displaying the about page on Inhabitent.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  * Template Name: About Page Template
  */
 

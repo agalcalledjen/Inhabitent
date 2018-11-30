@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  * Template Name: Find Us Page Template
  */
 

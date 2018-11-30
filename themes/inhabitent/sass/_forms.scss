@@ -18,12 +18,12 @@ input[type="submit"] {
   padding: .6rem 1rem .4rem;
 
   &:hover {
-    background: #19625d;
+    background: $color__btn-hover;
   }
 
   &:active,
   &:focus {
-    background: #19625d;
+    background: $color__btn-hover;
   }
 }
 

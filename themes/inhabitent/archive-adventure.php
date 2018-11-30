@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive pages.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  *  Template Name: Archive Adventure Template
  */
 
@@ -25,8 +25,6 @@ get_header(); ?>
         $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'posts_per_page' => 4);
         
         $adventure_posts = get_posts( $args ); ?>
-        <!-- <section class="frontpage-adventure">
-          <h2>Latest Adventures</h2> -->
             
             <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
               <article class="adventure-entry">

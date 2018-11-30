@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive pages.
  *
- * @package RED_Starter_Theme
+ * @package based on RED_Starter_Theme
  *  Template Name: Archive Product Template
  */
 

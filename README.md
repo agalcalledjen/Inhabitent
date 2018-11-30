@@ -25,7 +25,7 @@ This is a project produced from the following lessons from Week 5 & 6:
 
 Then add me to your `wp-content` directory.
 
-### 2. Rename the `inhabitent` directory
+### 2. Rename the `project-04-master` directory
 
 Make sure that the theme directory name is project appropriate!
 
@@ -71,9 +71,19 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
 Below are the subsequent learning outcomes.
 
 ### Taxonomy
+Grouping mechanism for posts, links or custom post types.
+
+#### Terms
+Names for different groupings such as *categories*, *tags*, *link categories* and *post formats*.
+- **Categories**: Sorts posts into pre-defined and broad categories.
+- **Tags**: Similar to categories and more free form.
+- **Link Categories**: Sorts links into categories.
+- **Post Formats**: Presents posts in certain formats and style and is used by a theme.
 
 ### Custom Post Types
+These can have different custom fields and custom category structures.
 
 ### Custom Page Templates
+These allow different layouts in appearance than the default ones.
 
 

@@ -49,7 +49,7 @@ add_action( 'login_enqueue_scripts', 'inhabitent_login_logo' );
  */
 // changing the login_headurl to the returned get_bloginfo('url') aka url of blog
 function inhabitent_the_url( $url ) {
-  return get_bloginfo( 'url' );
+  return home_url();
 }
 add_filter( 'login_headerurl', 'inhabitent_the_url' );
 
