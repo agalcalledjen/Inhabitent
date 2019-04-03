@@ -1,56 +1,39 @@
-# Inhabitent Theme
+# Inhabitent (WordPress Theme) 🛶🏕
 
-A WordPress starter theme for RED Academy students, forked from Underscores.
+A multi-page website for Inhabitent Camping Supply Co. and it includes a blog for camping supplies. It uses WordPress as a content management system.
 
-This is a project produced from the following lessons from Week 5 & 6:
-
-1. Intro to PHP
-2. More on PHP
-3. Intro to WordPress
-4. Custom WordPress Theming
-5. WordPress Functions, Hooks & Debugging
-6. Custom Post Types, Taxonomies & Fields
-7. Custom Post Loops & the WP Database
-8. OOP, Plugin Dev & Widget API
+(The WordPress starter theme is for RED Academy students and it was forked from Underscores.)
 
 ---
 
-![Image of Inhabitent Theme](https://github.com/nejmal/project-04/blob/master/themes/inhabitent/screenshot.png)
-           
+![Image of Inhabitent Theme](https://github.com/nejmal/Inhabitent/blob/master/inhabitent.png)
+
+![Gif of Inhabitent Theme](https://github.com/nejmal/Inhabitent/blob/master/inhabitent.gif)
+
 ---
 
 ## Installation
 
-### 1. Download me (don't clone me!)
+Download and do not clone.
 
-Then add me to your `wp-content` directory.
+Add < project > to your `wp-content` directory.
 
-### 2. Rename the `project-04-master` directory
+Rename the project directory, if needed and make sure that the theme directory name is project appropriate.
 
-Make sure that the theme directory name is project appropriate!
+Install dependencies inside of theme directory.
 
-### 3. Install the dev dependencies
+`npm install`
 
-Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+Update the proxy in `gulpfile.js` with the appropriate URL for the Browsersync (change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
 
 ---
 
 ## Technologies Used
+
 - HTML
 - CSS
 - JavaScript
   - jQuery
-- Git
-- GitHub
-- Terminal
-  - Homebrew
-- Node.js
-  - npm
-  - Gulp
 - MAMP
 - WordPress
   - Plugins:
@@ -65,25 +48,51 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
     - Theme Check
     - WP Migrate DB
   - Generate WP
+
 ---
 
 ## Personal Learnings
+
+### Web Developer (Project 4)
+
+This is a project produced from the following lessons from Week 5 & 6:
+
+1. Intro to PHP
+2. More on PHP
+3. Intro to WordPress
+4. Custom WordPress Theming
+5. WordPress Functions, Hooks & Debugging
+6. Custom Post Types, Taxonomies & Fields
+7. Custom Post Loops & the WP Database
+8. OOP, Plugin Dev & Widget API
+
 Below are the subsequent learning outcomes.
 
 ### Taxonomy
+
 Grouping mechanism for posts, links or custom post types.
 
 #### Terms
-Names for different groupings such as *categories*, *tags*, *link categories* and *post formats*.
+
+Names for different groupings such as _categories_, _tags_, _link categories_ and _post formats_.
+
 - **Categories**: Sorts posts into pre-defined and broad categories.
 - **Tags**: Similar to categories and more free form.
 - **Link Categories**: Sorts links into categories.
 - **Post Formats**: Presents posts in certain formats and style and is used by a theme.
 
 ### Custom Post Types
+
 These can have different custom fields and custom category structures.
 
 ### Custom Page Templates
+
 These allow different layouts in appearance than the default ones.
 
+---
 
+## Author
+
+[Jennifer Lam](https://github.com/nejmal), Full-Stack Developer student at [RED Academy](https://redacademy.com/vancouver/).
+
+Let's connect on [LinkedIn](https://www.linkedin.com/in/jenniferlam-/).
