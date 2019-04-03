@@ -22,7 +22,9 @@ Rename the project directory, if needed and make sure that the theme directory n
 
 Install dependencies inside of theme directory.
 
-`npm install`
+```
+npm install
+```
 
 Update the proxy in `gulpfile.js` with the appropriate URL for the Browsersync (change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
 
