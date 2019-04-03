@@ -8,7 +8,7 @@ A multi-page website for Inhabitent Camping Supply Co. and it includes a blog fo
 
 ![Image of Inhabitent Theme](https://github.com/nejmal/Inhabitent/blob/master/inhabitent.png)
 
-![Gif of Inhabitent Theme](https://github.com/nejmal/Inhabitent/blob/master/inhabitent.gif)
+<p align="center"><img src="https://github.com/nejmal/Inhabitent/blob/master/inhabitent.gif></p>
 
 ---
 
