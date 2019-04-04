@@ -96,6 +96,6 @@ These allow different layouts in appearance than the default ones.
 
 ## Author
 
-[Jennifer Lam](https://github.com/agalcalledjen), Full-Stack Developer student at [RED Academy](https://redacademy.com/vancouver/).
+[Jen Lam](https://github.com/agalcalledjen), Full-Stack Developer student at [RED Academy](https://redacademy.com/vancouver/).
 
 Let's connect on [LinkedIn](https://www.linkedin.com/in/agalcalledjen/).
