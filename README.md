@@ -6,7 +6,7 @@ A multi-page website for Inhabitent Camping Supply Co. and it includes a blog fo
 
 ---
 
-![Image of Inhabitent Theme](https://github.com/nejmal/Inhabitent/blob/master/inhabitent.png)
+![Image of Inhabitent Theme](https://github.com/agalcalledjen/Inhabitent/blob/master/inhabitent.png)
 
 <p align="center"><img src="https://github.com/nejmal/Inhabitent/blob/master/inhabitent.gif"></p>
 
@@ -97,4 +97,4 @@ These allow different layouts in appearance than the default ones.
 
 [Jennifer Lam](https://github.com/agalcalledjen), Full-Stack Developer student at [RED Academy](https://redacademy.com/vancouver/).
 
-Let's connect on [LinkedIn](https://www.linkedin.com/in/jenniferlam-/).
+Let's connect on [LinkedIn](https://www.linkedin.com/in/agalcalledjen/).
